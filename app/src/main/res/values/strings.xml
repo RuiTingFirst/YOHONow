@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">YOHONow</string>
+    <string name="home_main">推荐</string>
+    <string name="column_main">栏目</string>
+    <string name="community_main">社区</string>
+    <string name="video_main">视频</string>
+    <string name="magazine_main">杂志</string>
+    <string name="yi_shu">|</string>
+    <string name="yoho_boy">YOHO!BOY</string>
+    <string name="yoho_girl">YOHO!GIRL</string>
+    <string name="special">SPECIAL</string>
+    <string name="more">More ></string>
+    <string name="wallpaper_xing">*</string>
+    <string name="draw_layout_feedback">意见反馈</string>
+    <string name="draw_layout_comment">给我评价</string>
+    <string name="draw_layout_setting">设置</string>
+    <string name="draw_layout_denglu">登录</string>
+    <string name="draw_layout_my_shou_cang">我的收藏</string>
+    <string name="draw_layout_my_magazine">我的杂志</string>
+    <string name="draw_layout_my_question">我的问题</string>
+    <string name="huiKan">回看</string>
+    <string name="geng_xin_go">更新至</string>
+    <string name="pian">篇</string>
+    <string name="jingHao">#</string>
+    <string name="head_question">提问 : </string>
+
 </resources>

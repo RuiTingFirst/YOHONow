@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<android.support.design.widget.TabLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/magin_forty"
+    android:id="@+id/tab_magazine_fragment"
+    android:background="@color/colorWhite"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/magin_thirty"
+        android:text="@string/yi_shu"
+        android:padding="@dimen/padding_five"
+        android:layout_centerHorizontal="true"/>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_magazine_fragment"
+        android:id="@+id/vp_magazine_fragment"/>
+
+</RelativeLayout>

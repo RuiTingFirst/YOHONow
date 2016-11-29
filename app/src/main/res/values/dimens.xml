@@ -2,4 +2,34 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="padding_ten">10dp</dimen>
+    <dimen name="padding_five">5dp</dimen>
+    <dimen name="padding_three">3dp</dimen>
+    <dimen name="activity_zero">0dp</dimen>
+    <dimen name="magin_forty">40dp</dimen>
+    <dimen name="magin_thirty">30dp</dimen>
+    <dimen name="magin_Three_hundred_and_fifty">350dp</dimen>
+    <dimen name="magin_One_hundred_and_eighty">180dp</dimen>
+    <dimen name="magin_yibai">100dp</dimen>
+    <dimen name="magin_shiwu">15dp</dimen>
+    <dimen name="magin_yibaiyishi">110dp</dimen>
+    <dimen name="magin_yibaiershi">120dp</dimen>
+    <dimen name="magin_yibaisanshi">130dp</dimen>
+    <dimen name="magin_yibaisishi">140dp</dimen>
+    <dimen name="magin_yibaiwushi">150dp</dimen>
+    <dimen name="magin_erbaiwushi">250dp</dimen>
+    <dimen name="yibailiushi">160dp</dimen>
+    <dimen name="size_ten">10sp</dimen>
+    <dimen name="magin_fifteen">15dp</dimen>
+    <dimen name="size_fifteen">15sp</dimen>
+    <dimen name="magin_one">1dp</dimen>
+    <dimen name="size_twenty">20sp</dimen>
+    <dimen name="magin_twenty">20dp</dimen>
+    <dimen name="magin_two_hundred">200dp</dimen>
+    <dimen name="magin_one_hundred">100dp</dimen>
+    <dimen name="magin_fifty">50dp</dimen>
+    <dimen name="magin_two_hundred_and_fifty">250dp</dimen>
+    <dimen name="magin_twenty_five">25dp</dimen>
+    <dimen name="magin_eight">8dp</dimen>
+
 </resources>

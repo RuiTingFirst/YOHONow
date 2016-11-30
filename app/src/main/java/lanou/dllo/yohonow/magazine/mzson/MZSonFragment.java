@@ -16,6 +16,8 @@ import java.util.List;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
 import lanou.dllo.yohonow.tools.urltools.URLValues;
+import lanou.dllo.yohonow.tools.volleytools.NetHelper;
+import lanou.dllo.yohonow.tools.volleytools.NetListener;
 
 /**
  * Created by dllo on 16/11/26.
@@ -116,14 +118,14 @@ public class MZSonFragment extends BaseFragment {
         initUrlSpecialData();
     }
 
+    /**
+     * get解析, 请求special页数据
+     */
     private void initUrlSpecialData() {
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(URLValues.YOHO_SPECIAL_URL, new Response.Listener<String>() {
+        NetHelper.MyRequest(URLValues.YOHO_SPECIAL_URL, MSNumSpecialBean.class, new NetListener<MSNumSpecialBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                MSNumSpecialBean msNumSpecialBean = gson.fromJson(response, MSNumSpecialBean.class);
-                mSpecialBeenList = msNumSpecialBean.getData();
+            public void successListener(MSNumSpecialBean response) {
+                mSpecialBeenList = response.getData();
                 /**
                  * special
                  */
@@ -134,26 +136,22 @@ public class MZSonFragment extends BaseFragment {
                 Picasso.with(mContext).load(mSpecialBeenList.get(1).getCover()).into(mIvCoverSpecialTwo);
                 Picasso.with(mContext).load(mSpecialBeenList.get(2).getCover()).into(mIvCoverSpecialThree);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
     }
 
     /**
      * get解析 请求girl页数据
      */
     private void initURLGirlData() {
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(URLValues.YOHO_GIRL_URL, new Response.Listener<String>() {
+        NetHelper.MyRequest(URLValues.YOHO_GIRL_URL, MSNumGirlBean.class, new NetListener<MSNumGirlBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                MSNumGirlBean msNumGirlBean = gson.fromJson(response, MSNumGirlBean.class);
-                mGirlBeanList = msNumGirlBean.getData();
+            public void successListener(MSNumGirlBean response) {
+                mGirlBeanList = response.getData();
                 /**
                  * girl
                  */
@@ -164,26 +162,21 @@ public class MZSonFragment extends BaseFragment {
                 Picasso.with(mContext).load(mGirlBeanList.get(1).getCover()).into(mIvCoverGirlTwo);
                 Picasso.with(mContext).load(mGirlBeanList.get(2).getCover()).into(mIvCoverGirlThree);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
     }
-
     /**
      * get解析 请求boy 页数据
      */
     private void initUrlData() {
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(URLValues.YOHO_BOY_URL, new Response.Listener<String>() {
+        NetHelper.MyRequest(URLValues.YOHO_BOY_URL, MSNumBean.class, new NetListener<MSNumBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                MSNumBean msNumBean = gson.fromJson(response, MSNumBean.class);
-                mList = msNumBean.getData();
+            public void successListener(MSNumBean response) {
+                mList = response.getData();
                 /**
                  * boy
                  */
@@ -194,12 +187,11 @@ public class MZSonFragment extends BaseFragment {
                 Picasso.with(mContext).load(mList.get(1).getCover()).into(mIvCoverBoyTwo);
                 Picasso.with(mContext).load(mList.get(2).getCover()).into(mIvCoverBoyThree);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
     }
 }

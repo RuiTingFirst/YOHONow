@@ -75,7 +75,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_boy_two_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -99,7 +100,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_boy_three_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -161,7 +163,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_girl_one_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -185,7 +188,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_girl_two_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -209,7 +213,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_girl_three_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -270,7 +275,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_special_one_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -294,7 +300,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_special_two_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -318,7 +325,8 @@
                     <ImageView
                         android:id="@+id/item_iv_cover_sum_special_three_magazine_son_fragment"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
 
                     <ImageView
                         android:layout_width="wrap_content"

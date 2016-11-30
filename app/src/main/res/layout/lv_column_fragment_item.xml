@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/iv_cover_lv_column_fragment_item"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="@dimen/yibailiushi"
             android:scaleType="fitXY"/>
 
         <TextView

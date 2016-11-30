@@ -6,12 +6,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/magin_forty">
+        android:layout_height="@dimen/magin_forty"
+        android:background="@color/colorWhite">
 
         <ImageView
             android:id="@+id/iv_toolbar_mine_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:padding="@dimen/padding_ten"
             android:src="@mipmap/toolbar_mine"/>
 
@@ -20,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:padding="@dimen/padding_five"
             android:src="@mipmap/white_load_0000"/>
 
@@ -28,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:padding="@dimen/padding_five"
             android:src="@mipmap/toolbar_search"/>
     </RelativeLayout>

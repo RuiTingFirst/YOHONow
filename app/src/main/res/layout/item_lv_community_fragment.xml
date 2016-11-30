@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/magin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--有货布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_iv_author_info_head_icon_community_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_ten"
+                android:layout_toRightOf="@id/item_iv_author_info_head_icon_community_fragment"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_tv_author_info_nick_name_community_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/item_tv_create_time_community_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <!--置顶-->
+            <LinearLayout
+                android:id="@+id/item_ll_lv_zhiding_community_fragmnet"
+                android:layout_width="@dimen/magin_eighty"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorBlack"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/community_fragment_zhiding"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <!--postsTitle-->
+        <TextView
+            android:id="@+id/item_tv_posts_title_community_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack"/>
+        <!--隐藏textView-->
+        <TextView
+            android:id="@+id/item_tv_blocks_cotent_data_community_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"/>
+        <!--三张图片-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_yibaiershi"
+            android:layout_marginTop="@dimen/padding_ten"
+            android:orientation="horizontal">
+            <!--图片1-->
+            <ImageView
+                android:id="@+id/item_iv_one_blocks_cotent_data_community_fragment"
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"/>
+            <!--图片2-->
+            <ImageView
+                android:id="@+id/item_iv_two_blocks_cotent_data_community_fragment"
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"/>
+            <!--图片3-->
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/item_iv_three_blocks_cotent_data_community_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+                <!--图片3中隐藏的布局-->
+                <LinearLayout
+                    android:layout_width="@dimen/magin_eighty"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!--潮流风向-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_ten"
+            android:layout_marginTop="@dimen/padding_five">
+
+            <TextView
+                android:id="@+id/item_tv_forum_name_community_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorHui"/>
+
+            <TextView
+                android:id="@+id/item_tv_praise_community_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@mipmap/community_home_posts_thumbsup_bg_nor"/>
+
+            <TextView
+                android:id="@+id/item_tv_comment_community_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/magin_fifty"
+                android:drawableLeft="@mipmap/community_home_posts_comment_bg"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

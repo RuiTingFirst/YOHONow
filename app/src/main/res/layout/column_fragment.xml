@@ -7,14 +7,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/magin_forty"
         android:textColor="@color/colorBlack"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:background="@color/colorWhite"
         android:text="@string/column_main"/>
 <ListView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/lv_column_fragment"
-    android:layout_margin="@dimen/padding_five"
+    style="@style/magin"
     android:divider="@android:color/transparent"
     android:scrollbars="none">
 

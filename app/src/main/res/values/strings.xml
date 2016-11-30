@@ -22,6 +22,9 @@
     <string name="geng_xin_go">更新至</string>
     <string name="pian">篇</string>
     <string name="jingHao">#</string>
-    <string name="head_question">提问 : </string>
+    <string name="head_question">提问 :</string>
+    <string name="head_answer">解答 :</string>
+    <string name="qing_denglu">请登录</string>
+    <string name="community_fragment_zhiding">置顶</string>
 
 </resources>

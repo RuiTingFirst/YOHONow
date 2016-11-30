@@ -12,6 +12,8 @@ import com.google.gson.Gson;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
 import lanou.dllo.yohonow.tools.urltools.URLValues;
+import lanou.dllo.yohonow.tools.volleytools.NetHelper;
+import lanou.dllo.yohonow.tools.volleytools.NetListener;
 
 /**
  * Created by dllo on 16/11/26.
@@ -41,22 +43,21 @@ public class WPFragment extends BaseFragment {
         initUrlWallpaperDate();
     }
 
+    /**
+     * get 请求解析网络数据
+     */
     private void initUrlWallpaperDate() {
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(URLValues.WALLPAPER_URL, new Response.Listener<String>() {
+        NetHelper.MyRequest(URLValues.WALLPAPER_URL, WallPaperBean.class, new NetListener<WallPaperBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                WallPaperBean wallPaperBean = gson.fromJson(response, WallPaperBean.class);
-                mAdapter.setWallPaperBean(wallPaperBean);
+            public void successListener(WallPaperBean response) {
+                mAdapter.setWallPaperBean(response);
                 mListView.setAdapter(mAdapter);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
     }
 }

@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/magin_forty"
+    android:id="@+id/re_community_fragment">
 
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:text="@string/community_main"
+        android:id="@+id/tv_community_fragment"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_community_home_write_press_black"
+        android:src="@mipmap/community_home_write_press_black"
+        style="@style/magin"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/re_community_fragment"
+        android:id="@+id/lv_community_fragment">
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/magin_twenty"
+        android:layout_marginBottom="@dimen/magin_fifteen">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/community_home_plz_login_bg"
+            android:id="@+id/iv_user_icon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="@string/qing_denglu"
+            android:alpha="0.5"/>
+    </LinearLayout>
+
+</RelativeLayout>

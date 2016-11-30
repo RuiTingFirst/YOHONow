@@ -26,6 +26,8 @@ import java.util.Map;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
 import lanou.dllo.yohonow.tools.urltools.URLValues;
+import lanou.dllo.yohonow.tools.volleytools.NetHelper;
+import lanou.dllo.yohonow.tools.volleytools.NetListener;
 
 /**
  * Created by dllo on 16/11/23.
@@ -42,6 +44,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     /**
      * 绑定布局
+     *
      * @return
      */
     @Override
@@ -66,7 +69,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         /**
          * 添加头布局
          */
-        View mHeadView =  LayoutInflater.from(mContext).inflate(R.layout.head_item, null);
+        View mHeadView = LayoutInflater.from(mContext).inflate(R.layout.head_item, null);
         mListView.addHeaderView(mHeadView);
         mBanner = (Banner) mHeadView.findViewById(R.id.banner_head_item_home_fragment);
     }
@@ -116,82 +119,51 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
      * post请求, 解析 轮播图数据
      */
     private void initTrunUrlData() {
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,URLValues.HOME_TRUN_URL, new Response.Listener<String>() {
+        HashMap<String, String> map = new HashMap<>();
+        map.put(URLValues.HOME_TRUN_KEY, URLValues.HOME_TRUN_VALUE);
+        NetHelper.MyRequest(URLValues.HOME_TRUN_URL, HomeTrunBean.class, new NetListener<HomeTrunBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                HomeTrunBean homeTrunBean = gson.fromJson(response, HomeTrunBean.class);
+            public void successListener(HomeTrunBean response) {
                 mImage = new ArrayList<>();
-                for (int i = 0; i < homeTrunBean.getData().size(); i++) {
-                    mImage.add(homeTrunBean.getData().get(i).getImage());
+                for (int i = 0; i < response.getData().size(); i++) {
+                    mImage.add(response.getData().get(i).getImage());
                 }
                 /**
                  * 实现轮播效果
                  */
                 initTrunImage();
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<>();
-                map.put(URLValues.HOME_TRUN_KEY, URLValues.HOME_TRUN_VALUE);
-                return map;
-            }
-        };
-        requestQueue.add(stringRequest);
+        }, map);
     }
 
     /**
      * post请求, 解析数据
      */
     private void initPost() {
-        RequestQueue requestQueue = Volley.newRequestQueue(mContext);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URLValues.HOME_URL, new Response.Listener<String>() {
-            /**
-             * 解析成功返回的数据
-             * @param response
-             */
+        HashMap<String, String> map = new HashMap<>();
+        map.put(URLValues.HOME_KEY, URLValues.HOME_VALUE);
+        NetHelper.MyRequest(URLValues.HOME_URL, HomeBean.class, new NetListener<HomeBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                HomeBean homeBean = gson.fromJson(response, HomeBean.class);
-                mHomeAdapter.setHomeBean(homeBean);
+            public void successListener(HomeBean response) {
+                mHomeAdapter.setHomeBean(response);
                 mListView.setAdapter(mHomeAdapter);
             }
-        }, new Response.ErrorListener() {
-            /**
-             * 解析失败返回的数据
-             * @param error
-             */
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
-        }){
-            /**
-             * post 请求传入key value
-             * @return
-             * @throws AuthFailureError
-             */
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<>();
-                map.put(URLValues.HOME_KEY, URLValues.HOME_VALUE);
-                return map;
-            }
-        };
-        requestQueue.add(stringRequest);
+        }, map);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.iv_toolbar_mine_main:
                 // 左边拉出抽屉
                 mDrawerLayout.openDrawer(Gravity.LEFT);
@@ -202,29 +174,3 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         }
     }
 }
-//drawerLayout.setVisibility(View.VISIBLE);
-//        drawerLayout.openDrawer(Gravity.RIGHT);
-//        Animation in = AnimationUtils.loadAnimation(this, R.anim.in);
-//        drawerLayout.setAnimation(in);
-//        drawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
-//@Override
-//public void onDrawerSlide(View drawerView, float slideOffset) {
-//
-//        }
-//
-//@Override
-//public void onDrawerOpened(View drawerView) {
-//
-//        }
-//
-//@Override
-//public void onDrawerClosed(View drawerView) {
-//        drawerLayout.setVisibility(View.INVISIBLE);
-//        }
-//
-//@Override
-//public void onDrawerStateChanged(int newState) {
-//
-//        }
-//        });
-////                drawerLayout.setDrawerListener(new );

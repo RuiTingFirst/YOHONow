@@ -78,6 +78,7 @@
                 android:id="@+id/item_iv_one_blocks_cotent_data_community_fragment"
                 android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
+                android:padding="@dimen/padding_three"
                 android:layout_weight="1"
                 android:scaleType="fitXY"/>
             <!--图片2-->
@@ -85,6 +86,7 @@
                 android:id="@+id/item_iv_two_blocks_cotent_data_community_fragment"
                 android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
+                android:padding="@dimen/padding_three"
                 android:layout_weight="1"
                 android:scaleType="fitXY"/>
             <!--图片3-->
@@ -97,6 +99,7 @@
                     android:id="@+id/item_iv_three_blocks_cotent_data_community_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:padding="@dimen/padding_three"
                     android:scaleType="fitXY"/>
                 <!--图片3中隐藏的布局-->
                 <LinearLayout

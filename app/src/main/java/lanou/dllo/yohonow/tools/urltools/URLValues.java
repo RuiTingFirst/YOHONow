@@ -37,8 +37,8 @@ public class URLValues {
     public static final String WALLPAPER_KEY = "parameters";
     public static final String WALLPAPER_VALUE = "{\"platform\":\"4\",\"udid\":\"000000000000000b667280949982902\",\"language\":\"zh-Hans\",\"curVersion\":\"5.0.5\",\"authInfo\":{\"udid\":\"000000000000000b667280949982902\"},\"locale\":\"zh-Hans\"}";
 
-    public static final String COMMUNITY_URL = " http://social.yoho.cn/social?app_version=5.0.4&client_secret=2e515454baad66272556819822cb0bbe&client_type=android&lastedTime=0&limit=10&method=app.social.getHomePagePostList&os_version=android5.1%3AGoogle_Nexus_5_-_5.1.0_-_API_22_-_1080x1920&screen_size=1080x1776&v=7";
-    public static final String COMMUNITY_TRUN_URL = " http://social.yoho.cn/social?app_version=5.0.4&client_secret=a92d42115ed7187422d3dde4b15e9d5e&client_type=android&method=app.social.getPostsInfo&os_version=android5.1%3AGoogle_Nexus_5_-_5.1.0_-_API_22_-_1080x1920&postsId=27553&screen_size=1080x1776&v=7";
+    public static final String COMMUNITY_URL = "http://social.yoho.cn/social?app_version=5.0.4&client_secret=2e515454baad66272556819822cb0bbe&client_type=android&lastedTime=0&limit=10&method=app.social.getHomePagePostList&os_version=android5.1%3AGoogle_Nexus_5_-_5.1.0_-_API_22_-_1080x1920&screen_size=1080x1776&v=7";
+    public static final String COMMUNITY_RUN_URL = "http://social.yoho.cn/social?appType=2&app_version=5.0.4&client_secret=c93f2c29298e27c3abbab38628fab244&client_type=android&method=app.social.getForumCarouselInfo&os_version=android5.1%3AGoogle_Nexus_5_-_5.1.0_-_API_22_-_1080x1920&screen_size=1080x1776&v=7";
 
 
 }

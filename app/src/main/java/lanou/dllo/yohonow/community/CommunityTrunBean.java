@@ -11,9 +11,9 @@ public class CommunityTrunBean {
     /**
      * alg : SALT_MD5
      * code : 200
-     * data : {"authorInfo":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Yo君","signature":"YOHO!BUY饮水机管理员","uid":7950645},"blocks":[{"contentData":"之前玩ins的时候发现朋友圈之中只有我一个人在玩，便迎来了走在冷风中的冻感。。。。。。一个人的社交网络实在是太无聊了好嘛！！！！ ！ \r\n\r\n想成为网红？\r\n想结交潮人朋友？ \r\n想走进潮流圈？ \r\n觉得自己平时的穿搭审美很孤独？\r\n根本没有人懂？ \r\n想获取最新潮流资讯？ \r\n想分享时下最热潮流单品？ \r\n想买潮品又不知道什么地方可以买？ \r\n想参加大型潮流活动？ \r\n想fo紧余文乐？ \r\n想要潮到炸？？？ \r\n. \r\n. \r\n. \r\nmóu   měn   teí \r\n  没      问     题 \r\n\r\n只要一个YOHO!潮流社区，就可以满足你以上全部要求！ \r\n\r\n我们的社区验证码↓↓↓ \r\n社长：玩YOHO!潮流社区！ \r\n社员：我就是最潮的那个人！ \r\n\r\n（Tips: 社 区 二 十 四 小 时 不 插 电 营 业 中，社 长 在 此 恭 候 大 驾）","order":1,"size":"","templateKey":"text"},{"contentData":"http://img10.static.yhbimg.com/yhb-img01/2016/08/26/13/01bdf4920f5dec13c129a1ddaa6aaeef20.jpg?imageView/{mode}/w/{width}/h/{height}","order":2,"size":"750x1067","templateKey":"image"}],"browse":1693429,"comment":0,"createTime":1472188463478,"forumCode":10001,"forumName":"潮流风向","hasPraise":"N","id":27553,"indexTopTime":0,"isForumTop":0,"isHot":0,"isIndexTop":0,"postsTitle":"Welcome：一起玩YOHO!潮流社区，你就是最潮的那个人！","praise":262,"praiseUsers":[{"bgPic":"","headIcon":"http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}","nickName":"182****1413","uid":16355263},{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/11/29/13/01dc995dc4e2c5c11eff9fa1bef55796b4.407302.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"阿部_417","uid":24190278},{"bgPic":"","headIcon":"http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}","nickName":"131****2589","uid":22000964}],"revieweState":1,"revieweTime":0,"status":0,"updateTime":0}
-     * md5 : f93f5a42fd0f808c4057a4e48eb092e1
-     * message : 获取帖子详情成功.
+     * data : {"forumInfo":[{"commentsNum":4375,"forumCode":10001,"forumDesc":"潮流新鲜事24时讲不停！","forumName":"潮流风向","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/0176d79b939810951e47738818f508d33d.jpg","hotPost":{"contentData":"安利一位帅哥，最近很喜欢。","forumCode":10001,"hasImgFlg":"Y","postId":107000,"postsTitle":"哈迷的福利？！","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/28/22/01967e0a465da7369a5b01b04c1ae10fe8.382102.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"睿哥哥带衡妹妹飞","uid":20429102}},"newPost":{"contentData":"听说秋冬天气各位小伙伴们的内搭外穿除了黑灰色就没有别的颜色了？YOHO!BUY有货给你的心情加点色彩！\n\nstep 1：微信搜索公众号\u201cYOHO!BUY有货\u201d\nstep 2：发送关键词\u201c我要双肩包\u201d即可参与活动\n\n🌈你要的颜色，我们送给你！🌈","forumCode":10001,"hasImgFlg":"Y","postId":107014,"postsTitle":"🎒🎒这次的福利是what？点进来就知道！","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Yo君","signature":"YOHO!BUY饮水机管理员","uid":7950645}},"oneDayAddNum":154,"orderBy":1,"postsNum":1536,"praiseNum":20413},{"commentsNum":1408,"forumCode":10002,"forumDesc":"直击！最IN球鞋限时放送！","forumName":"聚焦潮鞋","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/014b2ea5d16908114f4e170b30f2f6fd3c.jpg","hotPost":{"contentData":"","forumCode":10002,"hasImgFlg":"Y","postId":106950,"postsTitle":"陆军一号？","user":{"bgPic":"http://img12.static.yhbimg.com/social/2016/11/24/11/0228db1b3555470f3d75f16772a4037530.jpg?imageView/{mode}/w/{width}/h/{height}","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/10/17/11/041ba4a210a6fc8c6c23ca55c46641c51e.682634.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"JerryHuang","signature":"","uid":7450519}},"newPost":{"contentData":"继\u201c橙盒\u201d、\u201c银盒\u201d之后，代表着Nike SB辉煌时代的\u201c粉盒\u201d终于登场啦！此番Nike SB回归本源，将3M反光材质注入Nike SB Dunk Low \u201cPink Box\u201d，采用黑色与粉色的撞色设计，骚气又小清新！氮素，只有男款（抱头痛哭10秒）11月26日发售","forumCode":10002,"hasImgFlg":"Y","postId":107089,"postsTitle":"粉色.只有男款？！","user":{"bgPic":"","headIcon":"http://img02.yohoboys.com/contentimg/2016/10/17/10/029f599258d4e0bf88a218a405499603b8.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Francsssss","signature":"啦啦阿拉","uid":8573181}},"oneDayAddNum":47,"orderBy":2,"postsNum":512,"praiseNum":5835},{"commentsNum":709,"forumCode":10003,"forumDesc":"分享爱物，好品味集结地","forumName":"爱享潮物","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/018df45aa8dc379fc728541a611fc035bf.jpg","hotPost":{"contentData":"","forumCode":10003,"hasImgFlg":"Y","postId":107003,"postsTitle":"太阳公公出来了","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/11/30/9/01a3d3ae257df3531696344d76a1dcf7e8.101263.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"🌡方涛涛涛","uid":36568596}},"newPost":{"contentData":"","forumCode":10003,"hasImgFlg":"Y","postId":107095,"postsTitle":"喵","user":{"bgPic":"","headIcon":"http://img02.yohoboys.com/contentimg/2016/10/17/10/029f599258d4e0bf88a218a405499603b8.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Francsssss","signature":"啦啦阿拉","uid":8573181}},"oneDayAddNum":16,"orderBy":3,"postsNum":417,"praiseNum":4635},{"commentsNum":655,"forumCode":10004,"forumDesc":"你与达人只差一张自拍","forumName":"潮人自曝","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/0181735155c91a728392a3fc24ba64b86d.jpg","hotPost":{"contentData":"找到了我的灵魂伴侣！MUJI熊猫宝宝！\n（Ally的don't touch my snkr卫衣好棒棒噢）","forumCode":10004,"hasImgFlg":"Y","postId":106810,"postsTitle":"恭喜广州入冬成功","user":{"bgPic":"","headIcon":"http://img02.yohoboys.com/contentimg/2016/10/27/15/02a15b7ae59f5538758b07db6ca9647ac8.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"飞行少女大MT","uid":14979071}},"newPost":{"contentData":"","forumCode":10004,"hasImgFlg":"Y","postId":107096,"postsTitle":"😉","user":{"bgPic":"","headIcon":"http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}","nickName":"18f792e","uid":26169786}},"oneDayAddNum":29,"orderBy":4,"postsNum":49345,"praiseNum":4498}],"resourceList":{"advertList":[{"bgColor":"","src":"http://img10.static.yhbimg.com/yhb-img01/2016/08/26/16/012d511348974ff30284561ebc109c3dd0.jpg?imageView2/{mode}/w/{width}/h/{height}","title":"","url":"http://m.yohobuy.com/?postid=27553&openby:yohobuy={\"action\":\"go.comm.postdetail\",\"params\":{\"postid\":\"27553\"}}"}],"textNoticeList":{"time":"3","list":[],"open":"N"}}}
+     * md5 : f46700afcac79959e0629f7e874d68c5
+     * message : 社区首页版块成功.
      */
 
     private String alg;
@@ -64,379 +64,489 @@ public class CommunityTrunBean {
 
     public static class DataBean {
         /**
-         * authorInfo : {"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Yo君","signature":"YOHO!BUY饮水机管理员","uid":7950645}
-         * blocks : [{"contentData":"之前玩ins的时候发现朋友圈之中只有我一个人在玩，便迎来了走在冷风中的冻感。。。。。。一个人的社交网络实在是太无聊了好嘛！！！！ ！ \r\n\r\n想成为网红？\r\n想结交潮人朋友？ \r\n想走进潮流圈？ \r\n觉得自己平时的穿搭审美很孤独？\r\n根本没有人懂？ \r\n想获取最新潮流资讯？ \r\n想分享时下最热潮流单品？ \r\n想买潮品又不知道什么地方可以买？ \r\n想参加大型潮流活动？ \r\n想fo紧余文乐？ \r\n想要潮到炸？？？ \r\n. \r\n. \r\n. \r\nmóu   měn   teí \r\n  没      问     题 \r\n\r\n只要一个YOHO!潮流社区，就可以满足你以上全部要求！ \r\n\r\n我们的社区验证码↓↓↓ \r\n社长：玩YOHO!潮流社区！ \r\n社员：我就是最潮的那个人！ \r\n\r\n（Tips: 社 区 二 十 四 小 时 不 插 电 营 业 中，社 长 在 此 恭 候 大 驾）","order":1,"size":"","templateKey":"text"},{"contentData":"http://img10.static.yhbimg.com/yhb-img01/2016/08/26/13/01bdf4920f5dec13c129a1ddaa6aaeef20.jpg?imageView/{mode}/w/{width}/h/{height}","order":2,"size":"750x1067","templateKey":"image"}]
-         * browse : 1693429
-         * comment : 0
-         * createTime : 1472188463478
-         * forumCode : 10001
-         * forumName : 潮流风向
-         * hasPraise : N
-         * id : 27553
-         * indexTopTime : 0
-         * isForumTop : 0
-         * isHot : 0
-         * isIndexTop : 0
-         * postsTitle : Welcome：一起玩YOHO!潮流社区，你就是最潮的那个人！
-         * praise : 262
-         * praiseUsers : [{"bgPic":"","headIcon":"http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}","nickName":"182****1413","uid":16355263},{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/11/29/13/01dc995dc4e2c5c11eff9fa1bef55796b4.407302.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"阿部_417","uid":24190278},{"bgPic":"","headIcon":"http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}","nickName":"131****2589","uid":22000964}]
-         * revieweState : 1
-         * revieweTime : 0
-         * status : 0
-         * updateTime : 0
+         * forumInfo : [{"commentsNum":4375,"forumCode":10001,"forumDesc":"潮流新鲜事24时讲不停！","forumName":"潮流风向","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/0176d79b939810951e47738818f508d33d.jpg","hotPost":{"contentData":"安利一位帅哥，最近很喜欢。","forumCode":10001,"hasImgFlg":"Y","postId":107000,"postsTitle":"哈迷的福利？！","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/28/22/01967e0a465da7369a5b01b04c1ae10fe8.382102.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"睿哥哥带衡妹妹飞","uid":20429102}},"newPost":{"contentData":"听说秋冬天气各位小伙伴们的内搭外穿除了黑灰色就没有别的颜色了？YOHO!BUY有货给你的心情加点色彩！\n\nstep 1：微信搜索公众号\u201cYOHO!BUY有货\u201d\nstep 2：发送关键词\u201c我要双肩包\u201d即可参与活动\n\n🌈你要的颜色，我们送给你！🌈","forumCode":10001,"hasImgFlg":"Y","postId":107014,"postsTitle":"🎒🎒这次的福利是what？点进来就知道！","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Yo君","signature":"YOHO!BUY饮水机管理员","uid":7950645}},"oneDayAddNum":154,"orderBy":1,"postsNum":1536,"praiseNum":20413},{"commentsNum":1408,"forumCode":10002,"forumDesc":"直击！最IN球鞋限时放送！","forumName":"聚焦潮鞋","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/014b2ea5d16908114f4e170b30f2f6fd3c.jpg","hotPost":{"contentData":"","forumCode":10002,"hasImgFlg":"Y","postId":106950,"postsTitle":"陆军一号？","user":{"bgPic":"http://img12.static.yhbimg.com/social/2016/11/24/11/0228db1b3555470f3d75f16772a4037530.jpg?imageView/{mode}/w/{width}/h/{height}","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/10/17/11/041ba4a210a6fc8c6c23ca55c46641c51e.682634.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"JerryHuang","signature":"","uid":7450519}},"newPost":{"contentData":"继\u201c橙盒\u201d、\u201c银盒\u201d之后，代表着Nike SB辉煌时代的\u201c粉盒\u201d终于登场啦！此番Nike SB回归本源，将3M反光材质注入Nike SB Dunk Low \u201cPink Box\u201d，采用黑色与粉色的撞色设计，骚气又小清新！氮素，只有男款（抱头痛哭10秒）11月26日发售","forumCode":10002,"hasImgFlg":"Y","postId":107089,"postsTitle":"粉色.只有男款？！","user":{"bgPic":"","headIcon":"http://img02.yohoboys.com/contentimg/2016/10/17/10/029f599258d4e0bf88a218a405499603b8.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Francsssss","signature":"啦啦阿拉","uid":8573181}},"oneDayAddNum":47,"orderBy":2,"postsNum":512,"praiseNum":5835},{"commentsNum":709,"forumCode":10003,"forumDesc":"分享爱物，好品味集结地","forumName":"爱享潮物","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/018df45aa8dc379fc728541a611fc035bf.jpg","hotPost":{"contentData":"","forumCode":10003,"hasImgFlg":"Y","postId":107003,"postsTitle":"太阳公公出来了","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/11/30/9/01a3d3ae257df3531696344d76a1dcf7e8.101263.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"🌡方涛涛涛","uid":36568596}},"newPost":{"contentData":"","forumCode":10003,"hasImgFlg":"Y","postId":107095,"postsTitle":"喵","user":{"bgPic":"","headIcon":"http://img02.yohoboys.com/contentimg/2016/10/17/10/029f599258d4e0bf88a218a405499603b8.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Francsssss","signature":"啦啦阿拉","uid":8573181}},"oneDayAddNum":16,"orderBy":3,"postsNum":417,"praiseNum":4635},{"commentsNum":655,"forumCode":10004,"forumDesc":"你与达人只差一张自拍","forumName":"潮人自曝","forumPic":"http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/0181735155c91a728392a3fc24ba64b86d.jpg","hotPost":{"contentData":"找到了我的灵魂伴侣！MUJI熊猫宝宝！\n（Ally的don't touch my snkr卫衣好棒棒噢）","forumCode":10004,"hasImgFlg":"Y","postId":106810,"postsTitle":"恭喜广州入冬成功","user":{"bgPic":"","headIcon":"http://img02.yohoboys.com/contentimg/2016/10/27/15/02a15b7ae59f5538758b07db6ca9647ac8.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"飞行少女大MT","uid":14979071}},"newPost":{"contentData":"","forumCode":10004,"hasImgFlg":"Y","postId":107096,"postsTitle":"😉","user":{"bgPic":"","headIcon":"http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}","nickName":"18f792e","uid":26169786}},"oneDayAddNum":29,"orderBy":4,"postsNum":49345,"praiseNum":4498}]
+         * resourceList : {"advertList":[{"bgColor":"","src":"http://img10.static.yhbimg.com/yhb-img01/2016/08/26/16/012d511348974ff30284561ebc109c3dd0.jpg?imageView2/{mode}/w/{width}/h/{height}","title":"","url":"http://m.yohobuy.com/?postid=27553&openby:yohobuy={\"action\":\"go.comm.postdetail\",\"params\":{\"postid\":\"27553\"}}"}],"textNoticeList":{"time":"3","list":[],"open":"N"}}
          */
 
-        private AuthorInfoBean authorInfo;
-        private int browse;
-        private int comment;
-        private long createTime;
-        private int forumCode;
-        private String forumName;
-        private String hasPraise;
-        private int id;
-        private int indexTopTime;
-        private int isForumTop;
-        private int isHot;
-        private int isIndexTop;
-        private String postsTitle;
-        private int praise;
-        private int revieweState;
-        private int revieweTime;
-        private int status;
-        private int updateTime;
-        private List<BlocksBean> blocks;
-        private List<PraiseUsersBean> praiseUsers;
+        private ResourceListBean resourceList;
+        private List<ForumInfoBean> forumInfo;
 
-        public AuthorInfoBean getAuthorInfo() {
-            return authorInfo;
+        public ResourceListBean getResourceList() {
+            return resourceList;
         }
 
-        public void setAuthorInfo(AuthorInfoBean authorInfo) {
-            this.authorInfo = authorInfo;
+        public void setResourceList(ResourceListBean resourceList) {
+            this.resourceList = resourceList;
         }
 
-        public int getBrowse() {
-            return browse;
+        public List<ForumInfoBean> getForumInfo() {
+            return forumInfo;
         }
 
-        public void setBrowse(int browse) {
-            this.browse = browse;
+        public void setForumInfo(List<ForumInfoBean> forumInfo) {
+            this.forumInfo = forumInfo;
         }
 
-        public int getComment() {
-            return comment;
-        }
-
-        public void setComment(int comment) {
-            this.comment = comment;
-        }
-
-        public long getCreateTime() {
-            return createTime;
-        }
-
-        public void setCreateTime(long createTime) {
-            this.createTime = createTime;
-        }
-
-        public int getForumCode() {
-            return forumCode;
-        }
-
-        public void setForumCode(int forumCode) {
-            this.forumCode = forumCode;
-        }
-
-        public String getForumName() {
-            return forumName;
-        }
-
-        public void setForumName(String forumName) {
-            this.forumName = forumName;
-        }
-
-        public String getHasPraise() {
-            return hasPraise;
-        }
-
-        public void setHasPraise(String hasPraise) {
-            this.hasPraise = hasPraise;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public int getIndexTopTime() {
-            return indexTopTime;
-        }
-
-        public void setIndexTopTime(int indexTopTime) {
-            this.indexTopTime = indexTopTime;
-        }
-
-        public int getIsForumTop() {
-            return isForumTop;
-        }
-
-        public void setIsForumTop(int isForumTop) {
-            this.isForumTop = isForumTop;
-        }
-
-        public int getIsHot() {
-            return isHot;
-        }
-
-        public void setIsHot(int isHot) {
-            this.isHot = isHot;
-        }
-
-        public int getIsIndexTop() {
-            return isIndexTop;
-        }
-
-        public void setIsIndexTop(int isIndexTop) {
-            this.isIndexTop = isIndexTop;
-        }
-
-        public String getPostsTitle() {
-            return postsTitle;
-        }
-
-        public void setPostsTitle(String postsTitle) {
-            this.postsTitle = postsTitle;
-        }
-
-        public int getPraise() {
-            return praise;
-        }
-
-        public void setPraise(int praise) {
-            this.praise = praise;
-        }
-
-        public int getRevieweState() {
-            return revieweState;
-        }
-
-        public void setRevieweState(int revieweState) {
-            this.revieweState = revieweState;
-        }
-
-        public int getRevieweTime() {
-            return revieweTime;
-        }
-
-        public void setRevieweTime(int revieweTime) {
-            this.revieweTime = revieweTime;
-        }
-
-        public int getStatus() {
-            return status;
-        }
-
-        public void setStatus(int status) {
-            this.status = status;
-        }
-
-        public int getUpdateTime() {
-            return updateTime;
-        }
-
-        public void setUpdateTime(int updateTime) {
-            this.updateTime = updateTime;
-        }
-
-        public List<BlocksBean> getBlocks() {
-            return blocks;
-        }
-
-        public void setBlocks(List<BlocksBean> blocks) {
-            this.blocks = blocks;
-        }
-
-        public List<PraiseUsersBean> getPraiseUsers() {
-            return praiseUsers;
-        }
-
-        public void setPraiseUsers(List<PraiseUsersBean> praiseUsers) {
-            this.praiseUsers = praiseUsers;
-        }
-
-        public static class AuthorInfoBean {
+        public static class ResourceListBean {
             /**
-             * bgPic :
-             * headIcon : http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}
-             * nickName : Yo君
-             * signature : YOHO!BUY饮水机管理员
-             * uid : 7950645
+             * advertList : [{"bgColor":"","src":"http://img10.static.yhbimg.com/yhb-img01/2016/08/26/16/012d511348974ff30284561ebc109c3dd0.jpg?imageView2/{mode}/w/{width}/h/{height}","title":"","url":"http://m.yohobuy.com/?postid=27553&openby:yohobuy={\"action\":\"go.comm.postdetail\",\"params\":{\"postid\":\"27553\"}}"}]
+             * textNoticeList : {"time":"3","list":[],"open":"N"}
              */
 
-            private String bgPic;
-            private String headIcon;
-            private String nickName;
-            private String signature;
-            private int uid;
+            private TextNoticeListBean textNoticeList;
+            private List<AdvertListBean> advertList;
 
-            public String getBgPic() {
-                return bgPic;
+            public TextNoticeListBean getTextNoticeList() {
+                return textNoticeList;
             }
 
-            public void setBgPic(String bgPic) {
-                this.bgPic = bgPic;
+            public void setTextNoticeList(TextNoticeListBean textNoticeList) {
+                this.textNoticeList = textNoticeList;
             }
 
-            public String getHeadIcon() {
-                return headIcon;
+            public List<AdvertListBean> getAdvertList() {
+                return advertList;
             }
 
-            public void setHeadIcon(String headIcon) {
-                this.headIcon = headIcon;
+            public void setAdvertList(List<AdvertListBean> advertList) {
+                this.advertList = advertList;
             }
 
-            public String getNickName() {
-                return nickName;
+            public static class TextNoticeListBean {
+                /**
+                 * time : 3
+                 * list : []
+                 * open : N
+                 */
+
+                private String time;
+                private String open;
+                private List<?> list;
+
+                public String getTime() {
+                    return time;
+                }
+
+                public void setTime(String time) {
+                    this.time = time;
+                }
+
+                public String getOpen() {
+                    return open;
+                }
+
+                public void setOpen(String open) {
+                    this.open = open;
+                }
+
+                public List<?> getList() {
+                    return list;
+                }
+
+                public void setList(List<?> list) {
+                    this.list = list;
+                }
             }
 
-            public void setNickName(String nickName) {
-                this.nickName = nickName;
-            }
+            public static class AdvertListBean {
+                /**
+                 * bgColor :
+                 * src : http://img10.static.yhbimg.com/yhb-img01/2016/08/26/16/012d511348974ff30284561ebc109c3dd0.jpg?imageView2/{mode}/w/{width}/h/{height}
+                 * title :
+                 * url : http://m.yohobuy.com/?postid=27553&openby:yohobuy={"action":"go.comm.postdetail","params":{"postid":"27553"}}
+                 */
 
-            public String getSignature() {
-                return signature;
-            }
+                private String bgColor;
+                private String src;
+                private String title;
+                private String url;
 
-            public void setSignature(String signature) {
-                this.signature = signature;
-            }
+                public String getBgColor() {
+                    return bgColor;
+                }
 
-            public int getUid() {
-                return uid;
-            }
+                public void setBgColor(String bgColor) {
+                    this.bgColor = bgColor;
+                }
 
-            public void setUid(int uid) {
-                this.uid = uid;
-            }
-        }
+                public String getSrc() {
+                    return src;
+                }
 
-        public static class BlocksBean {
-            /**
-             * contentData : 之前玩ins的时候发现朋友圈之中只有我一个人在玩，便迎来了走在冷风中的冻感。。。。。。一个人的社交网络实在是太无聊了好嘛！！！！ ！
+                public void setSrc(String src) {
+                    this.src = src;
+                }
 
-             想成为网红？
-             想结交潮人朋友？
-             想走进潮流圈？
-             觉得自己平时的穿搭审美很孤独？
-             根本没有人懂？
-             想获取最新潮流资讯？
-             想分享时下最热潮流单品？
-             想买潮品又不知道什么地方可以买？
-             想参加大型潮流活动？
-             想fo紧余文乐？
-             想要潮到炸？？？
-             .
-             .
-             .
-             móu   měn   teí
-             没      问     题
+                public String getTitle() {
+                    return title;
+                }
 
-             只要一个YOHO!潮流社区，就可以满足你以上全部要求！
+                public void setTitle(String title) {
+                    this.title = title;
+                }
 
-             我们的社区验证码↓↓↓
-             社长：玩YOHO!潮流社区！
-             社员：我就是最潮的那个人！
+                public String getUrl() {
+                    return url;
+                }
 
-             （Tips: 社 区 二 十 四 小 时 不 插 电 营 业 中，社 长 在 此 恭 候 大 驾）
-             * order : 1
-             * size :
-             * templateKey : text
-             */
-
-            private String contentData;
-            private int order;
-            private String size;
-            private String templateKey;
-
-            public String getContentData() {
-                return contentData;
-            }
-
-            public void setContentData(String contentData) {
-                this.contentData = contentData;
-            }
-
-            public int getOrder() {
-                return order;
-            }
-
-            public void setOrder(int order) {
-                this.order = order;
-            }
-
-            public String getSize() {
-                return size;
-            }
-
-            public void setSize(String size) {
-                this.size = size;
-            }
-
-            public String getTemplateKey() {
-                return templateKey;
-            }
-
-            public void setTemplateKey(String templateKey) {
-                this.templateKey = templateKey;
+                public void setUrl(String url) {
+                    this.url = url;
+                }
             }
         }
 
-        public static class PraiseUsersBean {
+        public static class ForumInfoBean {
             /**
-             * bgPic :
-             * headIcon : http://img11.static.yhbimg.com/yhb-img01/2016/07/05/13/017ec560b82c132ab2fdb22f7cf6f42b83.png?imageView/{mode}/w/{width}/h/{height}
-             * nickName : 182****1413
-             * uid : 16355263
+             * commentsNum : 4375
+             * forumCode : 10001
+             * forumDesc : 潮流新鲜事24时讲不停！
+             * forumName : 潮流风向
+             * forumPic : http://img10.static.yhbimg.com/yhb-img01/2016/08/18/14/0176d79b939810951e47738818f508d33d.jpg
+             * hotPost : {"contentData":"安利一位帅哥，最近很喜欢。","forumCode":10001,"hasImgFlg":"Y","postId":107000,"postsTitle":"哈迷的福利？！","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/28/22/01967e0a465da7369a5b01b04c1ae10fe8.382102.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"睿哥哥带衡妹妹飞","uid":20429102}}
+             * newPost : {"contentData":"听说秋冬天气各位小伙伴们的内搭外穿除了黑灰色就没有别的颜色了？YOHO!BUY有货给你的心情加点色彩！\n\nstep 1：微信搜索公众号\u201cYOHO!BUY有货\u201d\nstep 2：发送关键词\u201c我要双肩包\u201d即可参与活动\n\n🌈你要的颜色，我们送给你！🌈","forumCode":10001,"hasImgFlg":"Y","postId":107014,"postsTitle":"🎒🎒这次的福利是what？点进来就知道！","user":{"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Yo君","signature":"YOHO!BUY饮水机管理员","uid":7950645}}
+             * oneDayAddNum : 154
+             * orderBy : 1
+             * postsNum : 1536
+             * praiseNum : 20413
              */
 
-            private String bgPic;
-            private String headIcon;
-            private String nickName;
-            private int uid;
+            private int commentsNum;
+            private int forumCode;
+            private String forumDesc;
+            private String forumName;
+            private String forumPic;
+            private HotPostBean hotPost;
+            private NewPostBean newPost;
+            private int oneDayAddNum;
+            private int orderBy;
+            private int postsNum;
+            private int praiseNum;
 
-            public String getBgPic() {
-                return bgPic;
+            public int getCommentsNum() {
+                return commentsNum;
             }
 
-            public void setBgPic(String bgPic) {
-                this.bgPic = bgPic;
+            public void setCommentsNum(int commentsNum) {
+                this.commentsNum = commentsNum;
             }
 
-            public String getHeadIcon() {
-                return headIcon;
+            public int getForumCode() {
+                return forumCode;
             }
 
-            public void setHeadIcon(String headIcon) {
-                this.headIcon = headIcon;
+            public void setForumCode(int forumCode) {
+                this.forumCode = forumCode;
             }
 
-            public String getNickName() {
-                return nickName;
+            public String getForumDesc() {
+                return forumDesc;
             }
 
-            public void setNickName(String nickName) {
-                this.nickName = nickName;
+            public void setForumDesc(String forumDesc) {
+                this.forumDesc = forumDesc;
             }
 
-            public int getUid() {
-                return uid;
+            public String getForumName() {
+                return forumName;
             }
 
-            public void setUid(int uid) {
-                this.uid = uid;
+            public void setForumName(String forumName) {
+                this.forumName = forumName;
+            }
+
+            public String getForumPic() {
+                return forumPic;
+            }
+
+            public void setForumPic(String forumPic) {
+                this.forumPic = forumPic;
+            }
+
+            public HotPostBean getHotPost() {
+                return hotPost;
+            }
+
+            public void setHotPost(HotPostBean hotPost) {
+                this.hotPost = hotPost;
+            }
+
+            public NewPostBean getNewPost() {
+                return newPost;
+            }
+
+            public void setNewPost(NewPostBean newPost) {
+                this.newPost = newPost;
+            }
+
+            public int getOneDayAddNum() {
+                return oneDayAddNum;
+            }
+
+            public void setOneDayAddNum(int oneDayAddNum) {
+                this.oneDayAddNum = oneDayAddNum;
+            }
+
+            public int getOrderBy() {
+                return orderBy;
+            }
+
+            public void setOrderBy(int orderBy) {
+                this.orderBy = orderBy;
+            }
+
+            public int getPostsNum() {
+                return postsNum;
+            }
+
+            public void setPostsNum(int postsNum) {
+                this.postsNum = postsNum;
+            }
+
+            public int getPraiseNum() {
+                return praiseNum;
+            }
+
+            public void setPraiseNum(int praiseNum) {
+                this.praiseNum = praiseNum;
+            }
+
+            public static class HotPostBean {
+                /**
+                 * contentData : 安利一位帅哥，最近很喜欢。
+                 * forumCode : 10001
+                 * hasImgFlg : Y
+                 * postId : 107000
+                 * postsTitle : 哈迷的福利？！
+                 * user : {"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/28/22/01967e0a465da7369a5b01b04c1ae10fe8.382102.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"睿哥哥带衡妹妹飞","uid":20429102}
+                 */
+
+                private String contentData;
+                private int forumCode;
+                private String hasImgFlg;
+                private int postId;
+                private String postsTitle;
+                private UserBean user;
+
+                public String getContentData() {
+                    return contentData;
+                }
+
+                public void setContentData(String contentData) {
+                    this.contentData = contentData;
+                }
+
+                public int getForumCode() {
+                    return forumCode;
+                }
+
+                public void setForumCode(int forumCode) {
+                    this.forumCode = forumCode;
+                }
+
+                public String getHasImgFlg() {
+                    return hasImgFlg;
+                }
+
+                public void setHasImgFlg(String hasImgFlg) {
+                    this.hasImgFlg = hasImgFlg;
+                }
+
+                public int getPostId() {
+                    return postId;
+                }
+
+                public void setPostId(int postId) {
+                    this.postId = postId;
+                }
+
+                public String getPostsTitle() {
+                    return postsTitle;
+                }
+
+                public void setPostsTitle(String postsTitle) {
+                    this.postsTitle = postsTitle;
+                }
+
+                public UserBean getUser() {
+                    return user;
+                }
+
+                public void setUser(UserBean user) {
+                    this.user = user;
+                }
+
+                public static class UserBean {
+                    /**
+                     * bgPic :
+                     * headIcon : http://head.static.yhbimg.com/yhb-head/2016/8/28/22/01967e0a465da7369a5b01b04c1ae10fe8.382102.jpg?imageView/{mode}/w/{width}/h/{height}
+                     * nickName : 睿哥哥带衡妹妹飞
+                     * uid : 20429102
+                     */
+
+                    private String bgPic;
+                    private String headIcon;
+                    private String nickName;
+                    private int uid;
+
+                    public String getBgPic() {
+                        return bgPic;
+                    }
+
+                    public void setBgPic(String bgPic) {
+                        this.bgPic = bgPic;
+                    }
+
+                    public String getHeadIcon() {
+                        return headIcon;
+                    }
+
+                    public void setHeadIcon(String headIcon) {
+                        this.headIcon = headIcon;
+                    }
+
+                    public String getNickName() {
+                        return nickName;
+                    }
+
+                    public void setNickName(String nickName) {
+                        this.nickName = nickName;
+                    }
+
+                    public int getUid() {
+                        return uid;
+                    }
+
+                    public void setUid(int uid) {
+                        this.uid = uid;
+                    }
+                }
+            }
+
+            public static class NewPostBean {
+                /**
+                 * contentData : 听说秋冬天气各位小伙伴们的内搭外穿除了黑灰色就没有别的颜色了？YOHO!BUY有货给你的心情加点色彩！
+
+                 step 1：微信搜索公众号“YOHO!BUY有货”
+                 step 2：发送关键词“我要双肩包”即可参与活动
+
+                 🌈你要的颜色，我们送给你！🌈
+                 * forumCode : 10001
+                 * hasImgFlg : Y
+                 * postId : 107014
+                 * postsTitle : 🎒🎒这次的福利是what？点进来就知道！
+                 * user : {"bgPic":"","headIcon":"http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}","nickName":"Yo君","signature":"YOHO!BUY饮水机管理员","uid":7950645}
+                 */
+
+                private String contentData;
+                private int forumCode;
+                private String hasImgFlg;
+                private int postId;
+                private String postsTitle;
+                private UserBeanX user;
+
+                public String getContentData() {
+                    return contentData;
+                }
+
+                public void setContentData(String contentData) {
+                    this.contentData = contentData;
+                }
+
+                public int getForumCode() {
+                    return forumCode;
+                }
+
+                public void setForumCode(int forumCode) {
+                    this.forumCode = forumCode;
+                }
+
+                public String getHasImgFlg() {
+                    return hasImgFlg;
+                }
+
+                public void setHasImgFlg(String hasImgFlg) {
+                    this.hasImgFlg = hasImgFlg;
+                }
+
+                public int getPostId() {
+                    return postId;
+                }
+
+                public void setPostId(int postId) {
+                    this.postId = postId;
+                }
+
+                public String getPostsTitle() {
+                    return postsTitle;
+                }
+
+                public void setPostsTitle(String postsTitle) {
+                    this.postsTitle = postsTitle;
+                }
+
+                public UserBeanX getUser() {
+                    return user;
+                }
+
+                public void setUser(UserBeanX user) {
+                    this.user = user;
+                }
+
+                public static class UserBeanX {
+                    /**
+                     * bgPic :
+                     * headIcon : http://head.static.yhbimg.com/yhb-head/2016/8/26/12/012c2770697a5fbb123c229dad8238f48c.975577.jpg?imageView/{mode}/w/{width}/h/{height}
+                     * nickName : Yo君
+                     * signature : YOHO!BUY饮水机管理员
+                     * uid : 7950645
+                     */
+
+                    private String bgPic;
+                    private String headIcon;
+                    private String nickName;
+                    private String signature;
+                    private int uid;
+
+                    public String getBgPic() {
+                        return bgPic;
+                    }
+
+                    public void setBgPic(String bgPic) {
+                        this.bgPic = bgPic;
+                    }
+
+                    public String getHeadIcon() {
+                        return headIcon;
+                    }
+
+                    public void setHeadIcon(String headIcon) {
+                        this.headIcon = headIcon;
+                    }
+
+                    public String getNickName() {
+                        return nickName;
+                    }
+
+                    public void setNickName(String nickName) {
+                        this.nickName = nickName;
+                    }
+
+                    public String getSignature() {
+                        return signature;
+                    }
+
+                    public void setSignature(String signature) {
+                        this.signature = signature;
+                    }
+
+                    public int getUid() {
+                        return uid;
+                    }
+
+                    public void setUid(int uid) {
+                        this.uid = uid;
+                    }
+                }
             }
         }
     }

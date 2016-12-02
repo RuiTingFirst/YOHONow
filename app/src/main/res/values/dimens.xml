@@ -32,5 +32,6 @@
     <dimen name="magin_twenty_five">25dp</dimen>
     <dimen name="magin_eight">8dp</dimen>
     <dimen name="magin_eighty">80dp</dimen>
+    <dimen name="magin_two_hundred_ten">210dp</dimen>
 
 </resources>

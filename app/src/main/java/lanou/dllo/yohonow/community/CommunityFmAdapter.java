@@ -1,6 +1,7 @@
 package lanou.dllo.yohonow.community;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -15,6 +19,7 @@ import java.util.List;
 
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.column.ColumnHeadBean;
+import lanou.dllo.yohonow.tools.circletools.CircleDrawable;
 
 /**
  * Created by dllo on 16/11/30.
@@ -26,6 +31,7 @@ public class CommunityFmAdapter extends BaseAdapter {
     private List<String> mUrl;
     private Context mContext;
 
+
     public void setCommunityBean(CommunityBean communityBean) {
         mCommunityBean = communityBean;
         notifyDataSetChanged();
@@ -33,6 +39,7 @@ public class CommunityFmAdapter extends BaseAdapter {
 
     public CommunityFmAdapter(Context context) {
         mContext = context;
+
     }
 
     @Override
@@ -61,6 +68,38 @@ public class CommunityFmAdapter extends BaseAdapter {
             view.setTag(communityHolder);
         } else {
             communityHolder = (CommunityHolder) view.getTag();
+        }
+        for (int j = 0; j < mXList.get(i).getBlocks().size(); j++) {
+            if (mXList.get(i).getBlocks().get(j).getTemplateKey().equals("text")) {
+                communityHolder.mTvBlocksContentData.setText(mXList.get(i).getBlocks().get(j).getContentData());
+            } else {
+                int a = mXList.get(i).getBlocks().get(j).getContentData().indexOf("?");
+                String url = mXList.get(i).getBlocks().get(j).getContentData().substring(0, a);
+                mUrl.add(url);
+            }
+        }
+//        Glide.with(mContext).load(mXList.get(i).getAuthorInfo().getHeadIcon()).bitmapTransform(new CropCircleTransformation)
+        if (1 == mUrl.size()) {
+            Picasso.with(mContext).load(mUrl.get(0)).into(communityHolder.mIvBlocksContentDataOne);
+            /**
+             * 隐藏并占位 setVisibility(View.INVISIBLE)
+             */
+            communityHolder.mIvBlocksContentDataOne.setVisibility(View.VISIBLE);
+            communityHolder.mIvBlocksContentDataTwo.setVisibility(View.INVISIBLE);
+            communityHolder.mIvBlocksContentDataThree.setVisibility(View.INVISIBLE);
+        } else if (2 == mUrl.size()) {
+            Picasso.with(mContext).load(mUrl.get(0)).into(communityHolder.mIvBlocksContentDataOne);
+            Picasso.with(mContext).load(mUrl.get(1)).into(communityHolder.mIvBlocksContentDataTwo);
+            communityHolder.mIvBlocksContentDataTwo.setVisibility(View.VISIBLE);
+            communityHolder.mIvBlocksContentDataOne.setVisibility(View.VISIBLE);
+            communityHolder.mIvBlocksContentDataThree.setVisibility(View.INVISIBLE);
+        } else if (2 < mUrl.size()){
+            Picasso.with(mContext).load(mUrl.get(0)).into(communityHolder.mIvBlocksContentDataOne);
+            Picasso.with(mContext).load(mUrl.get(1)).into(communityHolder.mIvBlocksContentDataTwo);
+            Picasso.with(mContext).load(mUrl.get(2)).into(communityHolder.mIvBlocksContentDataThree);
+            communityHolder.mIvBlocksContentDataOne.setVisibility(View.VISIBLE);
+            communityHolder.mIvBlocksContentDataTwo.setVisibility(View.VISIBLE);
+            communityHolder.mIvBlocksContentDataThree.setVisibility(View.VISIBLE);
         }
 
         communityHolder.mTvNickName.setText(mXList.get(i).getAuthorInfo().getNickName());
@@ -122,3 +161,79 @@ public class CommunityFmAdapter extends BaseAdapter {
 //            Picasso.with(mContext).load(mUrl.get(1)).into(communityHolder.mIvBlocksContentDataTwo);
 //            Picasso.with(mContext).load(mUrl.get(2)).into(communityHolder.mIvBlocksContentDataThree);
 //        }
+
+//    int mJ;
+//for (mJ = 0; mJ < mXList.get(i).getBlocks().size(); mJ++) {
+//        if (mXList.get(i).getBlocks().get(mJ).getTemplateKey().equals("text")) {
+//        communityHolder.mTvBlocksContentData.setText(mXList.get(i).getBlocks().get(mJ).getContentData());
+//        Log.d("aaaa", mXList.get(i).getBlocks().get(mJ).getContentData());
+//        } else {
+//        int a = mXList.get(i).getBlocks().get(mJ).getContentData().indexOf("?");
+//        String url = mXList.get(i).getBlocks().get(mJ).getContentData().substring(0, a);
+//        mUrl.add(url);
+//        }
+//        }
+//if (1 == mUrl.size()) {
+//        Picasso.with(mContext).load(mUrl.get(0)).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+//        .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE).into(communityHolder.mIvBlocksContentDataOne);
+//        } else if (2 == mUrl.size()) {
+//        Picasso.with(mContext).load(mUrl.get(0)).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+//        .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE)
+//        .into(communityHolder.mIvBlocksContentDataOne);
+//        Picasso.with(mContext).load(mUrl.get(1)).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+//        .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE).into(communityHolder.mIvBlocksContentDataTwo);
+//        } else {
+//        Picasso.with(mContext).load(mUrl.get(0)).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+//        .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE).into(communityHolder.mIvBlocksContentDataOne);
+//        Picasso.with(mContext).load(mUrl.get(1)).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+//        .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE).into(communityHolder.mIvBlocksContentDataTwo);
+//        Picasso.with(mContext).load(mUrl.get(2)).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+//        .networkPolicy(NetworkPolicy.NO_CACHE,NetworkPolicy.NO_STORE).into(communityHolder.mIvBlocksContentDataThree);
+//        }
+
+
+//    int type = mListBeen.get(position).getBlocks().size();
+//    or (int i = 0; i < type; i++) {
+//        if (mListBeen.get(position).getBlocks().get(i).getTemplateKey().equals("text")) {
+//            if (mListBeen.get(position).getBlocks().get(i).getContentData() != null) {
+//                viewHolder.setText(R.id.content_data, mListBeen.get(position).getBlocks().get(i).getContentData());
+//            } else {
+//                viewHolder.getView(R.id.content_data).setVisibility(View.GONE);
+//            }
+//        } else {
+//            urls.add(getSubstring(mListBeen.get(position).getBlocks().get(i).getContentData()));
+//        }
+//    }
+//    ImageView imageView2 = viewHolder.getView(R.id.community_image_two);
+//    ImageView imageView3 = viewHolder.getView(R.id.community_image_three);
+//if (urls.size() == PIC_SIZE_ONE) {
+//        Log.d("aaaa", "第一种" + urls.size());
+//
+//        mOneUrl = urls.get(0);
+//
+//        viewHolder.setImage(R.id.community_image_one, mOneUrl);
+//
+//        imageView2.setVisibility(View.INVISIBLE);
+//        imageView3.setVisibility(View.INVISIBLE);
+//        viewHolder.setImage(R.id.community_image_two, mOneUrl);
+//
+//
+//        } else if (urls.size() == PIC_SIZE_TWO) {
+//        Log.d("aaaa", "第二种" + urls.size());
+//        mOneUrl = urls.get(0);
+//        mTwoUrl = urls.get(1);
+//        imageView2.setVisibility(View.VISIBLE);
+//        imageView3.setVisibility(View.INVISIBLE);
+//        viewHolder.setImage(R.id.community_image_one, mOneUrl);
+//        viewHolder.setImage(R.id.community_image_two, mTwoUrl);
+//        } else {
+//        Log.d("aaaa", "第三种" + urls.size());
+//        mOneUrl = urls.get(0);
+//        mTwoUrl = urls.get(1);
+//        mThreeUrl = urls.get(2);
+//
+//        viewHolder.setImage(R.id.community_image_one, mOneUrl);
+//        viewHolder.setImage(R.id.community_image_two, mTwoUrl);
+//        viewHolder.setImage(R.id.community_image_three, mThreeUrl);
+//        imageView2.setVisibility(View.VISIBLE);
+//        imageView3.setVisibility(View.VISIBLE);

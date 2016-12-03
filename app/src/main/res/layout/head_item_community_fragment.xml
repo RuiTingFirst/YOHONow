@@ -11,10 +11,11 @@
 
     </com.youth.banner.Banner>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_head_item_community_fragment"
+    <com.dalong.francyconverflow.FancyCoverFlow
+        android:id="@+id/francyconverflow_head_item_community_fragment"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/yibailiushi">
+        android:layout_marginTop="@dimen/magin_twenty"
+        android:layout_height="@dimen/magin_two_hundred_twoty">
 
-    </android.support.v4.view.ViewPager>
+    </com.dalong.francyconverflow.FancyCoverFlow>
 </LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_seek"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lanou.dllo.yohonow.home.homeseek.SeekActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_eighty"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_thirty"
+            android:layout_marginTop="@dimen/padding_ten"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_ten"
+                android:layout_weight="10"
+                android:background="@drawable/border"
+                android:drawableLeft="@mipmap/search_ic_s"
+                android:gravity="center_vertical"
+                android:hint="  请输入搜索关键字"
+                android:textSize="@dimen/size_ten"
+                android:paddingLeft="@dimen/padding_ten"
+                android:id="@+id/edt_home_seek_activity"/>
+
+            <ImageView
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@mipmap/search_cancel_icon"
+                android:id="@+id/iv_search_cancel_home_seek_activity"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/padding_ten"
+            android:id="@+id/tab_home_seek_activity">
+
+        </android.support.design.widget.TabLayout>
+    </LinearLayout>
+<android.support.v4.view.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_zero"
+    android:layout_weight="1"
+    android:id="@+id/vp_home_seek_activity">
+
+</android.support.v4.view.ViewPager>
+</LinearLayout>

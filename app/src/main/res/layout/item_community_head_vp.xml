@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/colorWhite"
+              android:id="@+id/item_ll_community_head_vp"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -11,52 +13,64 @@
         <ImageView
             android:id="@+id/item_iv_forim_pic_community_head_vp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/magin_eighty"/>
+            android:layout_height="@dimen/magin_eighty"
+            android:scaleType="fitXY"/>
 
         <TextView
             android:id="@+id/item_tv_forum_name_community_head_vp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/magin_twenty_five"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/magin_fifteen"/>
+            android:layout_marginTop="@dimen/magin_fifteen"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/magin_twenty"
+            android:layout_marginTop="@dimen/padding_five"
             android:layout_below="@id/item_tv_forum_name_community_head_vp"
-            android:layout_marginTop="@dimen/padding_ten"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/item_tv_posts_num_community_head_vp"
                 android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:layout_weight="20"
+                android:textSize="@dimen/size_ten"
+                android:textColor="@color/colorWhite"/>
 
             <TextView
-                android:layout_width="@dimen/magin_one"
+                android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:text="@string/yi_shu"/>
+                android:layout_weight="1"
+                android:text="@string/yi_shu"
+                android:textColor="@color/colorWhite"/>
 
             <TextView
                 android:id="@+id/item_tv_comments_num_community_head_vp"
                 android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center"/>
+                android:gravity="center"
+                android:layout_weight="20"
+                android:textSize="@dimen/size_ten"
+                android:textColor="@color/colorWhite"/>
 
             <TextView
-                android:layout_width="@dimen/magin_one"
+                android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:text="@string/yi_shu"/>
+                android:text="@string/yi_shu"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"/>
 
             <TextView
                 android:id="@+id/item_tv_praise_num_community_head_vp"
                 android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:layout_weight="20"
+                android:textSize="@dimen/size_ten"
+                android:textColor="@color/colorWhite"/>
         </LinearLayout>
 
     </RelativeLayout>
@@ -64,52 +78,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_fifteen"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/item_iv_hot_post_user_head_icon_community_head_vp"
             style="@style/magin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="@dimen/magin_thirty"
+            android:layout_height="@dimen/magin_thirty"/>
 
         <TextView
             android:id="@+id/item_tv_hot_post_posts_title_community_head_vp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/magin_twenty"/>
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/magin_one"
-        android:layout_marginLeft="@dimen/magin_twenty"
-        android:layout_marginRight="@dimen/magin_twenty"
-        android:layout_marginTop="@dimen/magin_fifteen"
-        android:background="@color/colorHui">
+        android:layout_marginLeft="@dimen/padding_five"
+        android:layout_marginRight="@dimen/padding_five"
+        android:layout_marginTop="@dimen/padding_five"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:id="@+id/item_ll_line_community_head_vp"
+        android:background="@color/colorDanHui">
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_fifteen"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/item_iv_new_post_user_head_icon_community_head_vp"
             style="@style/magin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="@dimen/magin_thirty"
+            android:layout_height="@dimen/magin_thirty"/>
 
         <TextView
             android:id="@+id/item_tv_new_post_posts_title_community_head_vp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/magin_twenty"/>
+            android:layout_gravity="center"/>
 
 
     </LinearLayout>
@@ -117,13 +130,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/magin_fifteen">
+        android:layout_marginTop="@dimen/padding_ten">
 
         <TextView
             android:id="@+id/item_tv_one_day_add_num_community_head_vp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:textSize="@dimen/size_ten"
+            android:layout_marginBottom="@dimen/padding_ten"
             android:layout_marginRight="@dimen/magin_fifteen"/>
     </RelativeLayout>
 

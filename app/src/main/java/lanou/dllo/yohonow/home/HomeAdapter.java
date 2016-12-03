@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -16,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 import lanou.dllo.yohonow.R;
+import lanou.dllo.yohonow.tools.timetools.StringTime;
 
 /**
  * Created by dllo on 16/11/23.
@@ -94,13 +96,10 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 0, 布局1 标题
                  */
                 viewHolderOne.mTvTitleZero.setText(mBean.get(0).getTitle());
-                // 时间戳转换
-//                String timeZeroOne = initTime(String.valueOf(mBean.get(0).getCreate_time()));
-//                viewHolderOne.mTvCreateTimeZero.setText(timeZeroOne);
                 /**
                  * type == 0, 布局1 时间
                  */
-//                viewHolderOne.mTvCreateTimeZero.setText(mBean.get(0).getCreate_time());
+                viewHolderOne.mTvCreateTimeZero.setText(StringTime.IntoTime(mBean.get(0).getCreate_time()));
                 /**
                  * type == 0, 布局1 tag_name
                  */
@@ -109,12 +108,12 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 0, 布局1 图片个数
                  * listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
                  */
-                    viewHolderOne.mTvImgNumZeroOne.setVisibility(View.VISIBLE);
+                viewHolderOne.mLlOne.setVisibility(View.VISIBLE);
                 if (mBean.get(0).getImgNum() > 0) {
                     // 布局显示
-                    viewHolderOne.mTvImgNumZeroOne.setText(String.valueOf(mBean.get(0).getImgNum()));
+                    viewHolderOne.mTvImgNumZeroOne.setText("  " + String.valueOf(mBean.get(0).getImgNum()));
                 } else {
-                    viewHolderOne.mTvImgNumZeroOne.setVisibility(View.GONE);
+                    viewHolderOne.mLlOne.setVisibility(View.INVISIBLE);
                 }
                 /**
                  * type == 0, 布局1 图片
@@ -126,13 +125,10 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 0, 布局2 标题
                  */
                 viewHolderOne.mTvTitleZeroTwo.setText(mBean.get(1).getTitle());
-//                // 时间戳转换
-//                String timeZeroTwo = initTime(String.valueOf(mBean.get(1).getCreate_time()));
-//                viewHolderOne.mTvCreateTimeZeroTwo.setText(timeZeroTwo);
                 /**
                  * type == 0, 布局2 时间
                  */
-//                viewHolderOne.mTvCreateTimeZeroTwo.setText(mBean.get(1).getCreate_time());
+                viewHolderOne.mTvCreateTimeZeroTwo.setText(StringTime.IntoTime(mBean.get(1).getCreate_time()));
 
                 /**
                  * type == 0, 布局2 tag_name
@@ -142,12 +138,13 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 0, 布局2 图片个数
                  * listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
                  */
-                    viewHolderOne.mTvImgNumZeroTwo.setVisibility(View.VISIBLE);
+                viewHolderOne.mLlTwo.setVisibility(View.VISIBLE);
                 if (mBean.get(1).getImgNum() > 0) {
                     // 布局显示
-                    viewHolderOne.mTvImgNumZeroTwo.setText(String.valueOf(mBean.get(1).getImgNum()));
+                    viewHolderOne.mTvImgNumZeroTwo.setText("  " + String.valueOf(mBean.get(1).getImgNum()));
                 } else {
-                    viewHolderOne.mTvImgNumZeroOne.setVisibility(View.GONE);
+                    // 占位
+                    viewHolderOne.mLlTwo.setVisibility(View.INVISIBLE);
                 }
                 /**
                  * type == 0, 布局2 图片
@@ -159,14 +156,11 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 0, 布局3 标题
                  */
                 viewHolderOne.mTvTitleZeroThree.setText(mBean.get(2).getTitle());
-                // 时间戳转换
-//                String timeZeroThree = initTime(String.valueOf(mBean.get(2).getCreate_time()));
-//                viewHolderOne.mTvCreateTimeZeroThree.setText(timeZeroThree);
+
                 /**
                  * type == 0, 布局3 时间
                  */
-//                viewHolderOne.mTvCreateTimeZeroThree.setText(mBean.get(2).getCreate_time());
-
+                viewHolderOne.mTvCreateTimeZeroThree.setText(StringTime.IntoTime(mBean.get(2).getCreate_time()));
                 /**
                  * type == 0, 布局3 tag_name
                  */
@@ -176,12 +170,12 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 0, 布局3 图片个数
                  * listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
                  */
-                    viewHolderOne.mTvImgNumZeroThree.setVisibility(View.VISIBLE);
+                viewHolderOne.mLlThree.setVisibility(View.VISIBLE);
                 if (mBean.get(2).getImgNum() > 0) {
                     // 显示隐藏布局
-                    viewHolderOne.mTvImgNumZeroThree.setText(String.valueOf(mBean.get(2).getImgNum()));
+                    viewHolderOne.mTvImgNumZeroThree.setText("  " + String.valueOf(mBean.get(2).getImgNum()));
                 } else {
-                    viewHolderOne.mTvImgNumZeroOne.setVisibility(View.GONE);
+                    viewHolderOne.mLlThree.setVisibility(View.INVISIBLE);
                 }
 
                 /**
@@ -212,8 +206,7 @@ public class HomeAdapter extends BaseAdapter {
                 /**
                  * type == 2, 时间
                  */
-//                viewHolderTwo.mTvCreateTimeTwo.setText(mBean.get(0).getCreate_time());
-
+                viewHolderTwo.mTvCreateTimeTwo.setText(StringTime.IntoTime(mBean.get(0).getCreate_time()));
                 /**
                  * type == 2, 标题
                  */
@@ -251,18 +244,6 @@ public class HomeAdapter extends BaseAdapter {
         return view;
     }
 
-    // 时间戳转换成String类型时间
-    private static String initTime(String s) {
-
-        Log.d("HomeAdapter", s + "==");
-        String res;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        long lt = new Long(s);
-        Date date = new Date(lt);
-        res = simpleDateFormat.format(date);
-        return res;
-    }
-
     /**
      * type == 0, 缓存类
      */
@@ -273,11 +254,13 @@ public class HomeAdapter extends BaseAdapter {
         private final TextView mTvTagNameZero;
         private final TextView mTvCreateTimeZero;
         private final TextView mTvImgNumZeroOne;
+        private final LinearLayout mLlOne;
 
         private final ImageView mImageViewZeroTwo;
         private final TextView mTvTitleZeroTwo;
         private final TextView mTvTagNameZeroTwo;
         private final TextView mTvCreateTimeZeroTwo;
+        private final LinearLayout mLlTwo;
 
         private final ImageView mImageViewZeroThree;
         private final TextView mTvTitleZeroThree;
@@ -285,6 +268,7 @@ public class HomeAdapter extends BaseAdapter {
         private final TextView mTvCreateTimeZeroThree;
         private final TextView mTvImgNumZeroTwo;
         private final TextView mTvImgNumZeroThree;
+        private final LinearLayout mLlThree;
 
         public ViewHolderOne(View view) {
             mImageViewZero = (ImageView) view.findViewById(R.id.iv_params_image_zero_home_fragment_item);
@@ -292,18 +276,21 @@ public class HomeAdapter extends BaseAdapter {
             mTvTagNameZero = (TextView) view.findViewById(R.id.tv_params_one_tag_name_zero_home_fragment_item);
             mTvCreateTimeZero = (TextView) view.findViewById(R.id.tv_params_one_create_time_zero_home_fragment_item);
             mTvImgNumZeroOne = (TextView) view.findViewById(R.id.tv_params_one_img_num_zero_home_fragment_item);
+            mLlOne = (LinearLayout) view.findViewById(R.id.ll_one_zero_home_fragment_item);
 
             mImageViewZeroTwo = (ImageView) view.findViewById(R.id.iv_params_two_image_zero_home_fragment_item);
             mTvTitleZeroTwo = (TextView) view.findViewById(R.id.tv_params_two_title_zero_home_fragment_item);
             mTvTagNameZeroTwo = (TextView) view.findViewById(R.id.tv_params_two_tag_name_zero_home_fragment_item);
             mTvCreateTimeZeroTwo = (TextView) view.findViewById(R.id.tv_params_two_create_time_zero_home_fragment_item);
             mTvImgNumZeroTwo = (TextView) view.findViewById(R.id.tv_params_two_img_num_zero_home_fragment_item);
+            mLlTwo = (LinearLayout) view.findViewById(R.id.ll_two_zero_home_fragment_item);
 
             mImageViewZeroThree = (ImageView) view.findViewById(R.id.iv_params_three_image_zero_home_fragment_item);
             mTvTitleZeroThree = (TextView) view.findViewById(R.id.tv_params_three_title_zero_home_fragment_item);
             mTvTagNameZeroThree = (TextView) view.findViewById(R.id.tv_params_three_tag_name_zero_home_fragment_item);
             mTvCreateTimeZeroThree = (TextView) view.findViewById(R.id.tv_params_three_create_time_zero_home_fragment_item);
             mTvImgNumZeroThree = (TextView) view.findViewById(R.id.tv_params_three_img_num_zero_home_fragment_item);
+            mLlThree = (LinearLayout) view.findViewById(R.id.ll_three_zero_home_fragment_item);
         }
     }
 
@@ -324,10 +311,4 @@ public class HomeAdapter extends BaseAdapter {
             mTvTagNameTwo = (TextView) view.findViewById(R.id.tv_params_tag_name_two_home_fragment);
         }
     }
-//// listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
-//    if (mBean.getData().get(position).getParams().get(0).getImgNum() > 0 ) {
-//        viewHolder.setText(R.id.zero_context_type, String.valueOf(mBean.getData().get(position).getParams().get(0).getImgNum()));
-//    }else {
-//        viewHolder.getView(R.id.zero_context_type).setVisibility(View.GONE);
-//    }
 }

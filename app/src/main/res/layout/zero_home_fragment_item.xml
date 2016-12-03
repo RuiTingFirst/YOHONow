@@ -3,223 +3,271 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorWhite"
-    android:layout_margin="@dimen/padding_five">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/magin_yibaiershi"
-        android:orientation="horizontal"
-        android:padding="@dimen/padding_five">
-
-        <RelativeLayout
-            android:layout_width="@dimen/activity_zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/iv_params_image_zero_home_fragment_item"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"/>
-
-            <TextView
-                android:id="@+id/tv_params_one_img_num_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/magin_twenty"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="@dimen/magin_eight"
-                android:alpha="0.5"
-                android:background="@color/colorBlack"
-                android:drawableLeft="@mipmap/xiaokuang"
-                android:textColor="@color/colorWhite"
-                android:visibility="gone"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="@dimen/activity_zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding_five"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+        <!--行布局1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_yibaiershi"
+            android:orientation="horizontal"
             android:padding="@dimen/padding_five">
 
-            <TextView
-                android:id="@+id/tv_params_one_title_zero_home_fragment_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/zero_jing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:text="#"
-                android:textColor="@color/colorlan"/>
-
-            <TextView
-                android:id="@+id/tv_params_one_tag_name_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="@dimen/padding_five"
-                android:layout_toRightOf="@id/zero_jing"
-                android:textColor="@color/colorlan"/>
-
-            <TextView
-                android:id="@+id/tv_params_one_create_time_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"/>
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/magin_yibaiershi"
-        android:orientation="horizontal"
-        android:padding="@dimen/padding_five">
-
-        <RelativeLayout
-            android:layout_width="@dimen/activity_zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/iv_params_two_image_zero_home_fragment_item"
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"/>
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/tv_params_two_img_num_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/magin_twenty"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="@dimen/magin_eight"
-                android:alpha="0.5"
-                android:background="@color/colorBlack"
-                android:drawableLeft="@mipmap/xiaokuang"
-                android:textColor="@color/colorWhite"
-                android:visibility="gone"/>
+                <ImageView
+                    android:id="@+id/iv_params_image_zero_home_fragment_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
 
-        </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/magin_forty"
+                    android:layout_height="@dimen/magin_twenty"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/padding_five"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack"
+                    android:visibility="gone"
+                    android:id="@+id/ll_one_zero_home_fragment_item">
 
-        <RelativeLayout
-            android:layout_width="@dimen/activity_zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+                    <TextView
+                        android:id="@+id/tv_params_one_img_num_zero_home_fragment_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/magin_twenty"
+                        android:drawableLeft="@mipmap/xiaokuang"
+                        android:layout_marginLeft="@dimen/padding_five"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_five">
+
+                <TextView
+                    android:id="@+id/tv_params_one_title_zero_home_fragment_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/zero_jing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="#"
+                    android:textColor="@color/colorlan"/>
+
+                <TextView
+                    android:id="@+id/tv_params_one_tag_name_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/padding_five"
+                    android:layout_toRightOf="@id/zero_jing"
+                    android:textColor="@color/colorlan"/>
+
+                <TextView
+                    android:id="@+id/tv_params_one_create_time_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_one"
+            android:layout_marginLeft="@dimen/padding_five"
+            android:layout_marginRight="@dimen/padding_five"
+            android:background="@color/colorDanHui"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+        <!--行布局2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_yibaiershi"
+            android:orientation="horizontal"
             android:padding="@dimen/padding_five">
 
-            <TextView
-                android:id="@+id/tv_params_two_title_zero_home_fragment_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/two_jing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:textColor="@color/colorlan"
-                android:text="@string/jingHao"/>
-
-            <TextView
-                android:id="@+id/tv_params_two_tag_name_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="@dimen/padding_five"
-                android:layout_toRightOf="@id/two_jing"
-                android:textColor="@color/colorlan"/>
-
-            <TextView
-                android:id="@+id/tv_params_two_create_time_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"/>
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/magin_yibaiershi"
-        android:orientation="horizontal"
-        android:padding="@dimen/padding_five">
-
-        <RelativeLayout
-            android:layout_width="@dimen/activity_zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/iv_params_three_image_zero_home_fragment_item"
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"/>
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/tv_params_three_img_num_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/magin_twenty"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="@dimen/magin_eight"
-                android:alpha="0.5"
-                android:background="@color/colorBlack"
-                android:drawableLeft="@mipmap/xiaokuang"
-                android:textColor="@color/colorWhite"
-                android:visibility="gone"/>
+                <ImageView
+                    android:id="@+id/iv_params_two_image_zero_home_fragment_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
 
-        </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/ll_two_zero_home_fragment_item"
+                    android:layout_width="@dimen/magin_forty"
+                    android:layout_height="@dimen/magin_twenty"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/magin_eight"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
-        <RelativeLayout
-            android:layout_width="@dimen/activity_zero"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+                <TextView
+                    android:id="@+id/tv_params_two_img_num_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/magin_twenty"
+                    android:drawableLeft="@mipmap/xiaokuang"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/padding_five"
+                    android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_five">
+
+                <TextView
+                    android:id="@+id/tv_params_two_title_zero_home_fragment_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/two_jing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/jingHao"
+                    android:textColor="@color/colorlan"/>
+
+                <TextView
+                    android:id="@+id/tv_params_two_tag_name_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/padding_five"
+                    android:layout_toRightOf="@id/two_jing"
+                    android:textColor="@color/colorlan"/>
+
+                <TextView
+                    android:id="@+id/tv_params_two_create_time_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_one"
+            android:layout_marginLeft="@dimen/padding_five"
+            android:layout_marginRight="@dimen/padding_five"
+            android:background="@color/colorDanHui"
+            android:orientation="horizontal"/>
+        <!--行布局3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_yibaiershi"
+            android:orientation="horizontal"
             android:padding="@dimen/padding_five">
 
-            <TextView
-                android:id="@+id/tv_params_three_title_zero_home_fragment_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/three_jing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:textColor="@color/colorlan"
-                android:text="@string/jingHao"/>
+                <ImageView
+                    android:id="@+id/iv_params_three_image_zero_home_fragment_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
 
-            <TextView
-                android:id="@+id/tv_params_three_tag_name_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="@dimen/padding_five"
-                android:layout_toRightOf="@id/three_jing"
-                android:textColor="@color/colorlan"/>
+                <LinearLayout
+                    android:id="@+id/ll_three_zero_home_fragment_item"
+                    android:layout_width="@dimen/magin_forty"
+                    android:layout_height="@dimen/magin_twenty"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/magin_eight"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack"
+                    android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tv_params_three_create_time_zero_home_fragment_item"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"/>
-        </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_params_three_img_num_zero_home_fragment_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/magin_twenty"
+                        android:drawableLeft="@mipmap/xiaokuang"
+                        android:layout_marginLeft="@dimen/padding_five"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_five">
+
+                <TextView
+                    android:id="@+id/tv_params_three_title_zero_home_fragment_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/three_jing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/jingHao"
+                    android:textColor="@color/colorlan"/>
+
+                <TextView
+                    android:id="@+id/tv_params_three_tag_name_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/padding_five"
+                    android:layout_toRightOf="@id/three_jing"
+                    android:textColor="@color/colorlan"/>
+
+                <TextView
+                    android:id="@+id/tv_params_three_create_time_zero_home_fragment_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 </LinearLayout>

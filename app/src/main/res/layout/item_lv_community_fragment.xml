@@ -16,8 +16,8 @@
 
             <ImageView
                 android:id="@+id/item_iv_author_info_head_icon_community_fragment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_width="@dimen/magin_thirty"
+                android:layout_height="@dimen/magin_thirty"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

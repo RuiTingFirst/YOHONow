@@ -1,5 +1,6 @@
 package lanou.dllo.yohonow.home;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import java.util.Map;
 
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
+import lanou.dllo.yohonow.home.homeseek.SeekActivity;
 import lanou.dllo.yohonow.tools.urltools.URLValues;
 import lanou.dllo.yohonow.tools.volleytools.NetHelper;
 import lanou.dllo.yohonow.tools.volleytools.NetListener;
@@ -169,7 +171,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 mDrawerLayout.openDrawer(Gravity.LEFT);
                 break;
             case R.id.iv_toolbar_search_main:
-
+                Intent intent = new Intent(getActivity(), SeekActivity.class);
+                startActivity(intent);
+                getActivity().finish();
                 break;
         }
     }

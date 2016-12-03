@@ -17,9 +17,11 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.column.ColumnHeadBean;
 import lanou.dllo.yohonow.tools.circletools.CircleDrawable;
+import lanou.dllo.yohonow.tools.timetools.StringTime;
 
 /**
  * Created by dllo on 16/11/30.
@@ -78,7 +80,7 @@ public class CommunityFmAdapter extends BaseAdapter {
                 mUrl.add(url);
             }
         }
-//        Glide.with(mContext).load(mXList.get(i).getAuthorInfo().getHeadIcon()).bitmapTransform(new CropCircleTransformation)
+        Glide.with(mContext).load(subStrings(mXList.get(i).getAuthorInfo().getHeadIcon())).bitmapTransform(new CropCircleTransformation(mContext)).into(communityHolder.mIvHeadIcon);
         if (1 == mUrl.size()) {
             Picasso.with(mContext).load(mUrl.get(0)).into(communityHolder.mIvBlocksContentDataOne);
             /**
@@ -104,7 +106,7 @@ public class CommunityFmAdapter extends BaseAdapter {
 
         communityHolder.mTvNickName.setText(mXList.get(i).getAuthorInfo().getNickName());
         communityHolder.mTvComment.setText(" " + String.valueOf(mXList.get(i).getComment()));
-        communityHolder.mTvCreateTime.setText(String.valueOf(mXList.get(i).getCreateTime()));
+        communityHolder.mTvCreateTime.setText(StringTime.IntoTime(String.valueOf(mXList.get(i).getCreateTime())));
         communityHolder.mTvForumName.setText(mXList.get(i).getForumName());
         communityHolder.mTvPraise.setText(" " + String.valueOf(mXList.get(i).getPraise()));
         if (mXList.get(i).getPostsTitle() != null) {
@@ -140,6 +142,16 @@ public class CommunityFmAdapter extends BaseAdapter {
             mTvComment = (TextView) view.findViewById(R.id.item_tv_comment_community_fragment);
             mTvPraise = (TextView) view.findViewById(R.id.item_tv_praise_community_fragment);
         }
+    }
+    public String subStrings(String str){
+        if(str.indexOf("?")!=-1){
+            String result = str.substring(0,str.indexOf("?"));
+            return result;
+        }else{
+            //返回一个字符串类型
+            return "";
+        }
+
     }
 }
 //        for (int j = 0; j < mXList.get(i).getBlocks().size(); j++) {

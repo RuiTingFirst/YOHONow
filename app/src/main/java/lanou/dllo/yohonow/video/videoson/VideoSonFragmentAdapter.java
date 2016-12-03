@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import lanou.dllo.yohonow.R;
+import lanou.dllo.yohonow.tools.timetools.StringTime;
 
 /**
  * Created by dllo on 16/11/25.
@@ -61,7 +62,7 @@ public class VideoSonFragmentAdapter extends BaseAdapter {
         /**
          * 时间
          */
-        vSonHolder.mTvCreateTime.setText(mBeanList.get(i).getCreate_time());
+        vSonHolder.mTvCreateTime.setText(StringTime.IntoTime(mBeanList.get(i).getCreate_time()));
         /**
          * tag_name
          */

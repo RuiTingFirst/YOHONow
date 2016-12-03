@@ -13,19 +13,19 @@
 
         <ImageView
             android:id="@+id/iv_params_image_two_home_fragment"
-            style="@style/magin"
             android:layout_width="match_parent"
             android:layout_height="@dimen/magin_two_hundred_and_fifty"/>
 
         <TextView
             android:id="@+id/tv_params_title_two_home_fragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_five"
+            android:textColor="@color/colorBlack"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_ten"
             android:orientation="horizontal"
             android:padding="@dimen/padding_five">
 

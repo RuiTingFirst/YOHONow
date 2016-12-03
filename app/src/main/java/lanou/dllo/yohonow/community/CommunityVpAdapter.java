@@ -7,14 +7,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.dalong.francyconverflow.FancyCoverFlow;
 import com.dalong.francyconverflow.FancyCoverFlowAdapter;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import lanou.dllo.yohonow.R;
 
 /**
@@ -43,29 +46,41 @@ public class CommunityVpAdapter extends FancyCoverFlowAdapter {
             reusableView = LayoutInflater.from(mContext).inflate(R.layout.item_community_head_vp, parent, false);
             WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
             int width = wm.getDefaultDisplay().getWidth()+600;
-            reusableView.setLayoutParams(new FancyCoverFlow.LayoutParams(width / 3 ,FancyCoverFlow.LayoutParams.WRAP_CONTENT));
+            reusableView.setLayoutParams(new FancyCoverFlow.LayoutParams(width * 2 / 5 ,FancyCoverFlow.LayoutParams.WRAP_CONTENT));
             viewHolder = new MyViewHolder(reusableView);
             reusableView.setTag(viewHolder);
         } else {
             viewHolder = (MyViewHolder) reusableView.getTag();
         }
-        viewHolder.mTvCommentNum.setText(String.valueOf(mList.get(position).getCommentsNum()));
-        viewHolder.mTvForumName.setText(String.valueOf(mList.get(position).getForumName()));
-        viewHolder.mTvHoyPostTitle.setText(mList.get(position).getHotPost().getPostsTitle());
-        viewHolder.mTvNewPostTitle.setText(mList.get(position).getNewPost().getPostsTitle());
-        viewHolder.mTvPostNum.setText(String.valueOf(mList.get(position).getPostsNum()));
-        viewHolder.mTvOneDayAddNum.setText(String.valueOf(mList.get(position).getOneDayAddNum()));
-        viewHolder.mTvPraiseNum.setText(String.valueOf(mList.get(position).getPraiseNum()));
-        Glide.with(mContext).load(mList.get(position).getForumPic()).into(viewHolder.mIvForumPic);
+        if (position == 0){
+            viewHolder.mLlLine.setVisibility(View.GONE);
+            viewHolder.mLl.setBackgroundResource(R.mipmap.yohocomtop);
+        }else if (position == mList.size() + 1){
+            viewHolder.mLlLine.setVisibility(View.GONE);
+            viewHolder.mLl.setBackgroundResource(R.mipmap.yohocomtop);
+        } else {
+            viewHolder.mTvCommentNum.setText("回复" + String.valueOf(mList.get(position -1).getCommentsNum()));
+            viewHolder.mTvForumName.setText(String.valueOf(mList.get(position -1).getForumName()));
+            viewHolder.mTvHoyPostTitle.setText(mList.get(position -1).getHotPost().getPostsTitle());
+            viewHolder.mTvNewPostTitle.setText(mList.get(position -1).getNewPost().getPostsTitle());
+            viewHolder.mTvPostNum.setText("帖子" + String.valueOf(mList.get(position -1).getPostsNum()));
+            viewHolder.mTvOneDayAddNum.setText(String.valueOf(mList.get(position -1).getOneDayAddNum()) + "条更新 >");
+            if (10000 < mList.get(position -1).getPraiseNum()) {
+                viewHolder.mTvPraiseNum.setText("赞" + mList.get(position -1).getPraiseNum() / 10000 + "W+");
+            } else {
+                viewHolder.mTvPraiseNum.setText("| 赞" + String.valueOf(mList.get(position -1).getPraiseNum()));
+            }
+            Picasso.with(mContext).load(mList.get(position -1).getForumPic()).into(viewHolder.mIvForumPic);
 
-        Glide.with(mContext).load(mList.get(position).getHotPost().getUser().getHeadIcon());
-
-        return reusableView;
+            Glide.with(mContext).load(subStrings(mList.get(position -1).getHotPost().getUser().getHeadIcon())).bitmapTransform(new CropCircleTransformation(mContext)).into(viewHolder.mIvHotPostUserHeadIcon);
+            Glide.with(mContext).load(subStrings(mList.get(position -1).getNewPost().getUser().getHeadIcon())).bitmapTransform(new CropCircleTransformation(mContext)).into(viewHolder.mIvNewPostUserHeadIcon);
+        }
+            return reusableView;
     }
 
     @Override
     public int getCount() {
-        return mCommunityTrunBean != null && mCommunityTrunBean.getData().getForumInfo().size() > 0 ? mCommunityTrunBean.getData().getForumInfo().size() : 0;
+        return mCommunityTrunBean != null && mCommunityTrunBean.getData().getForumInfo().size() > 0 ? mCommunityTrunBean.getData().getForumInfo().size() + 2 : 0;
     }
 
     @Override
@@ -90,6 +105,8 @@ public class CommunityVpAdapter extends FancyCoverFlowAdapter {
         private final ImageView mIvNewPostUserHeadIcon;
         private final TextView mTvNewPostTitle;
         private final TextView mTvOneDayAddNum;
+        private final LinearLayout mLl;
+        private final LinearLayout mLlLine;
 
         public MyViewHolder(View reusableView) {
             mIvForumPic = (ImageView) reusableView.findViewById(R.id.item_iv_forim_pic_community_head_vp);
@@ -102,6 +119,17 @@ public class CommunityVpAdapter extends FancyCoverFlowAdapter {
             mIvNewPostUserHeadIcon = (ImageView) reusableView.findViewById(R.id.item_iv_new_post_user_head_icon_community_head_vp);
             mTvNewPostTitle = (TextView) reusableView.findViewById(R.id.item_tv_new_post_posts_title_community_head_vp);
             mTvOneDayAddNum = (TextView) reusableView.findViewById(R.id.item_tv_one_day_add_num_community_head_vp);
+            mLl = (LinearLayout) reusableView.findViewById(R.id.item_ll_community_head_vp);
+            mLlLine = (LinearLayout) reusableView.findViewById(R.id.item_ll_line_community_head_vp);
+        }
+    }
+    public String subStrings(String str){
+        if(str.indexOf("?")!=-1){
+            String result = str.substring(0,str.indexOf("?"));
+            return result;
+        }else{
+            //返回一个字符串类型
+            return "";
         }
     }
 }

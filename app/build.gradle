@@ -35,4 +35,5 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.dalong.coverflow:coverflow:1.0.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
 }

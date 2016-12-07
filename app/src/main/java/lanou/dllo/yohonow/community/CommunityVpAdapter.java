@@ -54,10 +54,10 @@ public class CommunityVpAdapter extends FancyCoverFlowAdapter {
         }
         if (position == 0){
             viewHolder.mLlLine.setVisibility(View.GONE);
-            viewHolder.mLl.setBackgroundResource(R.mipmap.yohocomtop);
+            viewHolder.mLl.setBackgroundResource(R.mipmap.yohocommid1);
         }else if (position == mList.size() + 1){
             viewHolder.mLlLine.setVisibility(View.GONE);
-            viewHolder.mLl.setBackgroundResource(R.mipmap.yohocomtop);
+            viewHolder.mLl.setBackgroundResource(R.mipmap.yohocommid1);
         } else {
             viewHolder.mTvCommentNum.setText("回复" + String.valueOf(mList.get(position -1).getCommentsNum()));
             viewHolder.mTvForumName.setText(String.valueOf(mList.get(position -1).getForumName()));

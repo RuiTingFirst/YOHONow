@@ -50,7 +50,7 @@ public class WPFragmentAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         WallpaperHolder wallpaperHolder = null;
         mPaperBeanList = mWallPaperBean.getData().getWallpaperList();
-        if (view == null){
+        if (view == null) {
             view = LayoutInflater.from(mContext).inflate(R.layout.item_lv_wallpaper_fragment, viewGroup, false);
             wallpaperHolder = new WallpaperHolder(view);
             view.setTag(wallpaperHolder);
@@ -62,7 +62,9 @@ public class WPFragmentAdapter extends BaseAdapter {
         Picasso.with(mContext).load(mPaperBeanList.get(i).getImages().get(0).getThumbImage()).into(wallpaperHolder.mIvThumbImageOne);
         Picasso.with(mContext).load(mPaperBeanList.get(i).getImages().get(1).getThumbImage()).into(wallpaperHolder.mIvThumbImageThree);
         Picasso.with(mContext).load(mPaperBeanList.get(i).getImages().get(2).getThumbImage()).into(wallpaperHolder.mIvThumbImageTwo);
-        Picasso.with(mContext).load(mPaperBeanList.get(i).getImages().get(3).getThumbImage()).into(wallpaperHolder.mIvThumbImageFour);
+        if (mPaperBeanList.get(i).getImages().size() == 4) {
+            Picasso.with(mContext).load(mPaperBeanList.get(i).getImages().get(3).getThumbImage()).into(wallpaperHolder.mIvThumbImageFour);
+        }
         return view;
     }
 

@@ -1,6 +1,14 @@
 package lanou.dllo.yohonow.magazine.mzson;
 
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -23,7 +31,7 @@ import lanou.dllo.yohonow.tools.volleytools.NetListener;
  * Created by dllo on 16/11/26.
  */
 
-public class MZSonFragment extends BaseFragment {
+public class MZSonFragment extends BaseFragment implements View.OnClickListener {
 
     /**
      * boy
@@ -56,8 +64,13 @@ public class MZSonFragment extends BaseFragment {
     private List<MSNumBean.DataBean> mList;
     private List<MSNumGirlBean.DataBean> mGirlBeanList;
     private List<MSNumSpecialBean.DataBean> mSpecialBeenList;
+    private PopupWindow mPopupWindow;
+    private View mView;
+    private RelativeLayout mRl;
+
     /**
      * 绑定布局
+     *
      * @return
      */
     @Override
@@ -97,6 +110,8 @@ public class MZSonFragment extends BaseFragment {
         mIvCoverSpecialOne = bindView(R.id.item_iv_cover_sum_special_one_magazine_son_fragment);
         mIvCoverSpecialTwo = bindView(R.id.item_iv_cover_sum_special_two_magazine_son_fragment);
         mIvCoverSpecialThree = bindView(R.id.item_iv_cover_sum_special_three_magazine_son_fragment);
+
+
     }
 
     /**
@@ -116,6 +131,11 @@ public class MZSonFragment extends BaseFragment {
          * get解析, 请求special页数据
          */
         initUrlSpecialData();
+        /**
+         * 点击事件
+         */
+        setClick(this, mIvCoverBoyOne, mIvCoverBoyTwo, mIvCoverBoyThree, mIvCoverGirlOne, mIvCoverGirlTwo, mIvCoverGirlThree,
+                mIvCoverSpecialOne, mIvCoverSpecialTwo, mIvCoverSpecialThree);
     }
 
     /**
@@ -169,6 +189,7 @@ public class MZSonFragment extends BaseFragment {
             }
         });
     }
+
     /**
      * get解析 请求boy 页数据
      */
@@ -193,5 +214,147 @@ public class MZSonFragment extends BaseFragment {
 
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            /**
+             * boy 图片1
+             */
+            case R.id.item_iv_cover_sum_boy_one_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlBoyOne = mList.get(0).getCover();
+                String contentBoyOne = mList.get(0).getJournal();
+                initPopWindow(urlBoyOne, contentBoyOne);
+                break;
+            /**
+             * boy 图片2
+             */
+            case R.id.item_iv_cover_sum_boy_two_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlBoyTwo = mList.get(1).getCover();
+                String contentBoyTwo = mList.get(1).getJournal();
+                initPopWindow(urlBoyTwo, contentBoyTwo);
+                break;
+            /**
+             * boy 图片3
+             */
+            case R.id.item_iv_cover_sum_boy_three_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlBoyThree = mList.get(2).getCover();
+                String contentBoyThree = mList.get(2).getJournal();
+                initPopWindow(urlBoyThree, contentBoyThree);
+                break;
+            /**
+             * girl 图片1
+             */
+            case R.id.item_iv_cover_sum_girl_one_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlGirlOne = mGirlBeanList.get(0).getCover();
+                String contentGirlOne = mGirlBeanList.get(0).getJournal();
+                initPopWindow(urlGirlOne, contentGirlOne);
+                break;
+            /**
+             * girl 图片2
+             */
+            case R.id.item_iv_cover_sum_girl_two_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlGirlTwo = mGirlBeanList.get(1).getCover();
+                String contentGirlTwo = mGirlBeanList.get(1).getJournal();
+                initPopWindow(urlGirlTwo, contentGirlTwo);
+                break;
+            /**
+             * girl 图片3
+             */
+            case R.id.item_iv_cover_sum_girl_three_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlGirlThree = mGirlBeanList.get(2).getCover();
+                String contentGirlThree = mGirlBeanList.get(2).getJournal();
+                initPopWindow(urlGirlThree, contentGirlThree);
+                break;
+            /**
+             * special 图片1
+             */
+            case R.id.item_iv_cover_sum_special_one_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlSpecialOne = mSpecialBeenList.get(0).getCover();
+                String contentSpecialOne = mSpecialBeenList.get(0).getJournal();
+                initPopWindow(urlSpecialOne, contentSpecialOne);
+                break;
+            /**
+             * special 图片2
+             */
+            case R.id.item_iv_cover_sum_special_two_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlSpecialTwo = mSpecialBeenList.get(1).getCover();
+                String contentSpecialTwo = mSpecialBeenList.get(1).getJournal();
+                initPopWindow(urlSpecialTwo, contentSpecialTwo);
+                break;
+            /**
+             * special 图片3
+             */
+            case R.id.item_iv_cover_sum_special_three_magazine_son_fragment:
+                /**
+                 * POP 布局显示放大图片
+                 */
+                String urlSpecialThree = mSpecialBeenList.get(2).getCover();
+                String contentSpecialThree = mSpecialBeenList.get(2).getJournal();
+                initPopWindow(urlSpecialThree, contentSpecialThree);
+                break;
+        }
+    }
+
+    /**
+     * POP 布局显示放大图
+     */
+    private void initPopWindow(String url, String content) {
+        mPopupWindow = new PopupWindow(mContext);
+        // 铺满屏幕
+        mPopupWindow = new PopupWindow(mView, WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        mView = LayoutInflater.from(mContext).inflate(R.layout.pop_mzson_fragment, null);
+        // 设置动画效果
+        mPopupWindow.setAnimationStyle(R.style.AnimationFade);
+        mPopupWindow.setFocusable(true);
+        ImageView imageView = (ImageView) mView.findViewById(R.id.iv_pop_mzson_fragment);
+
+        Picasso.with(mContext).load(url).into(imageView);
+        TextView textView = (TextView) mView.findViewById(R.id.tv_yoho_pop_mzson_fragment);
+        mRl = (RelativeLayout) mView.findViewById(R.id.rl_pop_mzson_fragment);
+        textView.setText(content);
+        // 隐藏窗口标题栏
+        mRl.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        mPopupWindow.setContentView(mView);
+        // 点击pop消失
+        mRl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mPopupWindow.dismiss();
+            }
+        });
+        if (!mPopupWindow.isShowing()) {
+            mPopupWindow.showAtLocation(mIvCoverBoyOne, Gravity.BOTTOM, 0, 0);
+        } else {
+            mPopupWindow.dismiss();
+        }
+
     }
 }

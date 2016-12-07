@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/padding_five"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_forty"
+            android:gravity="center_vertical"
+            android:text="@string/point_magazine"
+            android:textColor="@color/colorBlack"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_one"
+            android:layout_margin="@dimen/padding_five"
+            android:background="@color/colorDanHui">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_two_hundred_and_fifty"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:padding="@dimen/padding_five">
+
+                <ImageView
+                    android:id="@+id/item_iv_three_params_cover_lv_home_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/download_magazine_logo"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/activity_zero"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_tv_three_params_journal_lv_home_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_twenty"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/item_tv_three_params_summary_home_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_twenty"
+                    android:ellipsize="end"
+                    android:maxLines="9"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

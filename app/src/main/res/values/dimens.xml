@@ -39,5 +39,10 @@
     <dimen name="magin_two_hundred_twoty">220dp</dimen>
     <dimen name="magin_ninty">90dp</dimen>
     <dimen name="magin_ninety">90dp</dimen>
+    <dimen name="magin_five_hundred">500dp</dimen>
+    <dimen name="magin_four_hundred">400dp</dimen>
+    <dimen name="magin_two_hundred_and_thirty">230dp</dimen>
+    <dimen name="magin_three_hundred_eight">380dp</dimen>
+    <dimen name="magin_three_hundred_sixty">360dp</dimen>
 
 </resources>

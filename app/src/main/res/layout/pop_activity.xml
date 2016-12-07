@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/colorWhite"
+              android:layout_width="match_parent"
+              android:padding="@dimen/magin_twenty"
+              android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/magin_twenty"
+    android:gravity="center"
+    android:textColor="@color/colorBlack"
+    android:textSize="@dimen/size_twenty"
+    android:text="@string/YohoFamily"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_fifteen"
+        android:gravity="center"
+        android:text="@string/YohoFamilyPop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_one"
+        android:background="@color/colorHui"
+        android:layout_marginTop="@dimen/magin_thirty">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sure"
+        android:gravity="center"
+        android:textSize="@dimen/size_twenty"
+        android:textColor="@color/colorBlack"/>
+</LinearLayout>

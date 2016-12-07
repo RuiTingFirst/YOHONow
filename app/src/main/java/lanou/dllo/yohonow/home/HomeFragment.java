@@ -173,7 +173,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             case R.id.iv_toolbar_search_main:
                 Intent intent = new Intent(getActivity(), SeekActivity.class);
                 startActivity(intent);
-                getActivity().finish();
                 break;
         }
     }

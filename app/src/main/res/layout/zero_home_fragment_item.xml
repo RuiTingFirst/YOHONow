@@ -66,6 +66,7 @@
                     android:id="@+id/tv_params_one_title_zero_home_fragment_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_five"
                     android:textColor="@color/colorBlack"/>
 
                 <TextView
@@ -73,7 +74,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/padding_five"
                     android:text="#"
+                    android:textSize="@dimen/size_ten"
                     android:textColor="@color/colorlan"/>
 
                 <TextView
@@ -82,6 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="@dimen/padding_five"
+                    android:textSize="@dimen/size_ten"
                     android:layout_toRightOf="@id/zero_jing"
                     android:textColor="@color/colorlan"/>
 
@@ -89,6 +93,8 @@
                     android:id="@+id/tv_params_one_create_time_zero_home_fragment_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_ten"
+                    android:layout_marginLeft="@dimen/magin_fifteen"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"/>
             </RelativeLayout>
@@ -156,6 +162,7 @@
                     android:id="@+id/tv_params_two_title_zero_home_fragment_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_five"
                     android:textColor="@color/colorBlack"/>
 
                 <TextView
@@ -163,7 +170,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/padding_five"
                     android:text="@string/jingHao"
+                    android:textSize="@dimen/size_ten"
                     android:textColor="@color/colorlan"/>
 
                 <TextView
@@ -172,6 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="@dimen/padding_five"
+                    android:textSize="@dimen/size_ten"
                     android:layout_toRightOf="@id/two_jing"
                     android:textColor="@color/colorlan"/>
 
@@ -179,6 +189,8 @@
                     android:id="@+id/tv_params_two_create_time_zero_home_fragment_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_ten"
+                    android:layout_marginLeft="@dimen/magin_fifteen"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"/>
             </RelativeLayout>
@@ -242,6 +254,7 @@
                     android:id="@+id/tv_params_three_title_zero_home_fragment_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_five"
                     android:textColor="@color/colorBlack"/>
 
                 <TextView
@@ -249,6 +262,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/padding_five"
+                    android:textSize="@dimen/size_ten"
                     android:text="@string/jingHao"
                     android:textColor="@color/colorlan"/>
 
@@ -258,6 +273,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="@dimen/padding_five"
+                    android:textSize="@dimen/size_ten"
                     android:layout_toRightOf="@id/three_jing"
                     android:textColor="@color/colorlan"/>
 
@@ -266,6 +282,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:textSize="@dimen/size_ten"
+                    android:layout_marginLeft="@dimen/magin_fifteen"
                     android:layout_centerHorizontal="true"/>
             </RelativeLayout>
         </LinearLayout>

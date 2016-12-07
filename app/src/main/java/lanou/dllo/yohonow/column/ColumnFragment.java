@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
@@ -26,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
 import lanou.dllo.yohonow.tools.circletools.CircleDrawable;
@@ -115,7 +117,7 @@ public class ColumnFragment extends BaseFragment {
                 mTvNick.setText(response.getData().getData().get(0).getNick());
                 mTvQuestion.setText(" " + response.getData().getData().get(0).getQuestion());
                 mTvDataAnswer.setText(" " + response.getData().getData().get(0).getAnswer());
-                Picasso.with(mContext).load(response.getData().getData().get(0).getHeadpic()).transform(new CircleTransform()).into(mIvHeadpic);
+                Glide.with(mContext).load(response.getData().getData().get(0).getHeadpic()).bitmapTransform(new CropCircleTransformation(mContext)).into(mIvHeadpic);
             }
 
             @Override

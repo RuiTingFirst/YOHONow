@@ -11,12 +11,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.util.Date;
 import java.util.List;
 
 import lanou.dllo.yohonow.R;
+import lanou.dllo.yohonow.base.YoHoHolder;
 import lanou.dllo.yohonow.tools.timetools.StringTime;
 
 /**
@@ -64,6 +66,8 @@ public class HomeAdapter extends BaseAdapter {
             return TYPE_ZERO;
         } else if (mHomeBean.getData().get(position).getType() == 2) {
             return TYPE_TWO;
+        } else if (mHomeBean.getData().get(position).getType() == 3){
+            return TYPE_THREE;
         } else {
             return -1;
         }
@@ -118,8 +122,9 @@ public class HomeAdapter extends BaseAdapter {
                 /**
                  * type == 0, 布局1 图片
                  */
-                Picasso.with(mContext).load(mBean.get(0).getImage()).into(viewHolderOne.mImageViewZero);
-
+                if (!mBean.get(0).getImage().isEmpty()) {
+                    Picasso.with(mContext).load(mBean.get(0).getImage()).into(viewHolderOne.mImageViewZero);
+                }
                 // type == 0, 布局2
                 /**
                  * type == 0, 布局2 标题
@@ -181,7 +186,9 @@ public class HomeAdapter extends BaseAdapter {
                 /**
                  * type == 0, 布局3 图片
                  */
-                Picasso.with(mContext).load(mBean.get(2).getImage()).into(viewHolderOne.mImageViewZeroThree);
+                if (!mBean.get(2).getImage().isEmpty()) {
+                    Picasso.with(mContext).load(mBean.get(2).getImage()).into(viewHolderOne.mImageViewZeroThree);
+                }
                 break;
 
             // type == 2, 获取布局数据
@@ -195,14 +202,10 @@ public class HomeAdapter extends BaseAdapter {
                 } else {
                     viewHolderTwo = (ViewHolderTwo) view.getTag();
                 }
-                Log.d("HomeAdapter", mBean.get(0).getTag().get(0).getTag_name() + "--");
                 /**
                  * type == 2, tag_name
                  */
                 viewHolderTwo.mTvTagNameTwo.setText(mBean.get(0).getTag().get(0).getTag_name());
-//                String timeTwo = initTime(String.valueOf(mBean.get(i).getCreate_time()));
-//                viewHolderTwo.mTvCreateTimeTwo.setText(timeTwo);
-
                 /**
                  * type == 2, 时间
                  */
@@ -216,7 +219,22 @@ public class HomeAdapter extends BaseAdapter {
                  * type == 2, 图片
                  */
                 Picasso.with(mContext).load(mBean.get(0).getImage()).into(viewHolderTwo.mIvImageTwo);
-
+                break;
+            /**
+             * type == 3, 注入布局
+             */
+            case TYPE_THREE:
+                ViewHolderThree viewHolderThree = null;
+                if (view == null){
+                    view = LayoutInflater.from(mContext).inflate(R.layout.three_home_fragment_item, viewGroup, false);
+                    viewHolderThree = new ViewHolderThree(view);
+                    view.setTag(viewHolderThree);
+                } else {
+                    viewHolderThree = (ViewHolderThree) view.getTag();
+                }
+                Glide.with(mContext).load(mBean.get(0).getCover()).into(viewHolderThree.mIvParamsCoverThree);
+                viewHolderThree.mTvJournalThree.setText(mBean.get(0).getJournal());
+                viewHolderThree.mTvSummaryThree.setText(mBean.get(0).getSummary());
                 break;
 
             case -1:
@@ -224,7 +242,7 @@ public class HomeAdapter extends BaseAdapter {
                 ViewHolderOne viewHolderOne1 = null;
                 if (view == null) {
                     // 注入布局
-                    view = LayoutInflater.from(mContext).inflate(R.layout.zero_home_fragment_item, viewGroup, false);
+                    view = LayoutInflater.from(mContext).inflate(R.layout.ten_hunder_home_fragment_item, viewGroup, false);
                     viewHolderOne1 = new ViewHolderOne(view);
                     view.setTag(viewHolderOne1);
                 } else {
@@ -233,13 +251,6 @@ public class HomeAdapter extends BaseAdapter {
 
                 break;
 
-            // type == 3, 获取布局数据
-//            case TYPE_THREE:
-//                if (view == null){
-//                    // 注入布局
-//                    view = LayoutInflater.from(mContext).inflate(R.layout.three_home_fragment_item, viewGroup, false);
-//                }
-//                break;
         }
         return view;
     }
@@ -309,6 +320,22 @@ public class HomeAdapter extends BaseAdapter {
             mTvTitleTwo = (TextView) view.findViewById(R.id.tv_params_title_two_home_fragment);
             mTvCreateTimeTwo = (TextView) view.findViewById(R.id.tv_params_create_time_two_home_fragment);
             mTvTagNameTwo = (TextView) view.findViewById(R.id.tv_params_tag_name_two_home_fragment);
+        }
+    }
+
+    /**
+     * type == 3 缓存类
+     */
+    private class ViewHolderThree {
+
+        private final ImageView mIvParamsCoverThree;
+        private final TextView mTvJournalThree;
+        private final TextView mTvSummaryThree;
+
+        public ViewHolderThree(View view) {
+            mIvParamsCoverThree = (ImageView) view.findViewById(R.id.item_iv_three_params_cover_lv_home_fragment);
+            mTvJournalThree = (TextView) view.findViewById(R.id.item_tv_three_params_journal_lv_home_fragment);
+            mTvSummaryThree = (TextView) view.findViewById(R.id.item_tv_three_params_summary_home_fragment);
         }
     }
 }

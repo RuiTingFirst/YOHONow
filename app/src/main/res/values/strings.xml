@@ -26,5 +26,24 @@
     <string name="head_answer">解答 :</string>
     <string name="qing_denglu">请登录</string>
     <string name="community_fragment_zhiding">置顶</string>
+    <string name="proint_magazine">·杂志</string>
+    <string name="point_magazine">·杂志</string>
+    <string name="log_in_text">Yoho!Family账号可登录Yoho!Now</string>
+    <string name="phone_number">手机号/邮箱</string>
+    <string name="password">密码</string>
+    <string name="password_forget">忘记密码</string>
+    <string name="international">international Customer</string>
+    <string name="register"><![CDATA[< 注册Yoho!Family]]></string>
+    <string name="pleaseEnterASearchKeyword">请输入搜索关键字</string>
+    <string name="yohoFamily">注册Yoho!Family</string>
+    <string name="YohoFamily">YoHo!Family</string>
+    <string name="YohoFamilyPop">Yoho1Family账号可登录YohoBuy!有货、Yoho!Now及SHOW</string>
+    <string name="sure">确定</string>
+    <string name="country">国家和地区</string>
+    <string name="china">中国</string>
+    <string name="addEightSix">+86</string>
+    <string name="phone">手机号</string>
+    <string name="next">下一步</string>
+    <string name="download">立即下载</string>
 
 </resources>

@@ -14,7 +14,8 @@
         <ImageView
             android:id="@+id/iv_params_image_two_home_fragment"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/magin_two_hundred_and_fifty"/>
+            android:layout_height="@dimen/magin_two_hundred_and_fifty"
+            android:scaleType="fitXY"/>
 
         <TextView
             android:id="@+id/tv_params_title_two_home_fragment"
@@ -34,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/padding_five"
+                android:textSize="@dimen/size_ten"
                 android:text="@string/jingHao"
                 android:textColor="@color/colorBlue"/>
 
@@ -42,12 +44,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:textSize="@dimen/size_ten"
                 android:textColor="@color/colorlan"/>
 
             <TextView
                 android:id="@+id/tv_params_create_time_two_home_fragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/size_ten"
                 android:layout_marginLeft="@dimen/magin_twenty_five"/>
         </LinearLayout>
     </LinearLayout>

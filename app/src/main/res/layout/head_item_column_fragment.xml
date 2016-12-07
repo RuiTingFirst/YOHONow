@@ -38,9 +38,9 @@
 
             <ImageView
                 android:id="@+id/iv_headpic_head_item_column_fragment"
-                style="@style/magin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                style="@style/maginAnswer"
+                android:layout_width="@dimen/magin_thirty"
+                android:layout_height="@dimen/magin_thirty"/>
 
             <LinearLayout
                 style="@style/magin"
@@ -83,8 +83,8 @@
             <ImageView
                 android:id="@+id/iv_daifu_head_item_column_fragment"
                 style="@style/maginAnswer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_width="@dimen/magin_thirty"
+                android:layout_height="@dimen/magin_thirty"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

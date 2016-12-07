@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorHui"
+              android:orientation="vertical">
+
+    <!--国家和地区-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:layout_margin="@dimen/padding_ten"
+        android:background="@drawable/bordershen">
+
+        <TextView
+            android:id="@+id/tv_country_register_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:gravity="center_vertical"
+            android:hint="@string/country"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow_gray_white_register_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_ten"
+            android:src="@mipmap/arrow_gray_white"/>
+
+        <TextView
+            android:id="@+id/tv_china_register_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/padding_ten"
+            android:layout_toLeftOf="@id/iv_arrow_gray_white_register_fragment"
+            android:gravity="center"
+            android:hint="@string/china"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"/>
+
+    </RelativeLayout>
+    <!--手机号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:layout_marginLeft="@dimen/padding_ten"
+        android:layout_marginRight="@dimen/padding_ten"
+        android:layout_marginTop="@dimen/magin_twenty"
+        android:background="@drawable/bordershen">
+
+        <TextView
+            android:id="@+id/tv_addeight_six_register_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:gravity="center_vertical"
+            android:text="@string/addEightSix"
+            android:textColor="@color/colorWhite"/>
+
+        <EditText
+            android:id="@+id/edt_phone_number_register_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:layout_toRightOf="@id/tv_addeight_six_register_fragment"
+            android:background="@null"
+            android:hint="@string/phone"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorHui"/>
+
+        <ImageView
+            android:id="@+id/iv_num_close_small_register_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_ten"
+            android:src="@mipmap/close_small"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next_register_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_fifty"
+        android:layout_margin="@dimen/padding_ten"
+        android:text="@string/next"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_ten"
+        android:layout_marginRight="@dimen/padding_ten"
+        android:gravity="center"
+        android:text="@string/YohoFamilyPop"
+        android:textColor="@color/colorWhite"/>
+</LinearLayout>

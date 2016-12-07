@@ -1,5 +1,6 @@
 package lanou.dllo.yohonow.community;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
@@ -20,6 +21,7 @@ import java.util.List;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
 import lanou.dllo.yohonow.home.GlideImageLoader;
+import lanou.dllo.yohonow.login.LogInActivity;
 import lanou.dllo.yohonow.tools.urltools.URLValues;
 import lanou.dllo.yohonow.tools.volleytools.NetHelper;
 import lanou.dllo.yohonow.tools.volleytools.NetListener;
@@ -28,7 +30,7 @@ import lanou.dllo.yohonow.tools.volleytools.NetListener;
  * Created by dllo on 16/11/24.
  */
 
-public class CommunityFragment extends BaseFragment {
+public class CommunityFragment extends BaseFragment implements View.OnClickListener {
 
     private ListView mListView;
     private List<Integer> mImage;
@@ -36,6 +38,8 @@ public class CommunityFragment extends BaseFragment {
     private CommunityFmAdapter mCommunityFmAdapter;
     private CommunityVpAdapter mCommunityVpAdapter;
     private FancyCoverFlow mFancyCoverFlow;
+    private ImageView mIvWritePress;
+    private ImageView mIvLohIn;
 
     @Override
     protected int setLayout() {
@@ -45,6 +49,8 @@ public class CommunityFragment extends BaseFragment {
     @Override
     protected void initView() {
         mListView = bindView(R.id.lv_community_fragment);
+        mIvWritePress = bindView(R.id.iv_community_home_write_press_black_community_fragment);
+        mIvLohIn = bindView(R.id.iv_user_icon_community_fragment);
         View headView = LayoutInflater.from(mContext).inflate(R.layout.head_item_community_fragment, null);
         mListView.addHeaderView(headView);
         mBanner = (Banner) headView.findViewById(R.id.banner_head_item_community_fragment);
@@ -67,9 +73,20 @@ public class CommunityFragment extends BaseFragment {
          */
         mCommunityFmAdapter = new CommunityFmAdapter(mContext);
         initUrlGetData();
+        /**
+         * 点击事件
+         */
+        initClick();
 
     }
 
+    private void initClick() {
+        setClick(this, mIvLohIn, mIvWritePress);
+    }
+
+    /**
+     * 请求可滑动vp的网络数据
+     */
     private void initVpData() {
         NetHelper.MyRequest(URLValues.COMMUNITY_RUN_URL, CommunityTrunBean.class, new NetListener<CommunityTrunBean>() {
             @Override
@@ -135,6 +152,26 @@ public class CommunityFragment extends BaseFragment {
         mBanner.setIndicatorGravity(BannerConfig.CENTER);
         // banner设置方法全部调用完毕时最后调用
         mBanner.start();
+    }
+
+    /**
+     * 点击事件
+     * @param view
+     */
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            // 社区右边的点击事件
+            case R.id.iv_community_home_write_press_black_community_fragment:
+                Intent intent = new Intent(mContext, LogInActivity.class);
+                startActivity(intent);
+                break;
+            // 登录的点击事件
+            case R.id.iv_user_icon_community_fragment:
+                Intent intentLingIn = new Intent(mContext, LogInActivity.class);
+                startActivity(intentLingIn);
+                break;
+        }
     }
 }
 

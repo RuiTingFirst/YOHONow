@@ -8,10 +8,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.ColorFilterTransformation;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import lanou.dllo.yohonow.R;
 
 /**
@@ -59,7 +62,7 @@ public class ColumnAdapter extends BaseAdapter {
         /**
          * 图片
          */
-        Picasso.with(mContext).load(mColumnBeen.getData().get(i).getCover()).into(columnHolder.mIvCover);
+        Glide.with(mContext).load(mColumnBeen.getData().get(i).getCover()).into(columnHolder.mIvCover);
         /**
          * 标题
          */

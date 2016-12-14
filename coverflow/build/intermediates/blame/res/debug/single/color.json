@@ -60,11 +60,11 @@
         "source": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color/abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color/abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
         "source": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/dllo/Desktop/YOHONow/coverflow/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color/abc_tint_seek_thumb.xml"
     }
 ]

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_marginLeft="@dimen/size_ten"
+        android:layout_marginTop="@dimen/padding_ten"
+        android:layout_marginRight="@dimen/padding_ten">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_two_hundred_and_thirty"
+            android:scaleType="fitXY"
+            android:id="@+id/item_iv_image_lv_column_detail"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_five"
+            android:layout_marginRight="@dimen/padding_five"
+            android:textSize="@dimen/size_fifteen"
+            android:layout_marginTop="@dimen/padding_ten"
+            android:textColor="@color/colorBlack"
+            android:maxLines="1"
+            android:id="@+id/item_tv_title_lv_column_detail"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="@dimen/padding_ten"
+            android:layout_marginTop="@dimen/magin_fifteen">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorlan"
+                android:textSize="@dimen/size_ten"
+                android:id="@+id/item_tv_tag_name_lv_column_detail"
+                android:layout_marginLeft="@dimen/padding_five"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_fifteen"
+                android:id="@+id/item_tv_create_time_lv_column_detail"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

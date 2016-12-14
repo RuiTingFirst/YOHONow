@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_yibaisishi">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/padding_five"
+            android:scaleType="fitXY"
+            android:id="@+id/item_iv_gv_my_magazine"/>
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/item_rl_tag_selected_gv_my_magazine">-->
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@mipmap/tag_selected"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:visibility="gone"-->
+                <!--android:id="@+id/item_iv_tag_selected_gv_my_magazine"/>-->
+        <!--</RelativeLayout>-->
+        <CheckBox
+            android:layout_width="@dimen/magin_thirty"
+            android:layout_height="@dimen/magin_thirty"
+            android:layout_centerInParent="true"
+            android:id="@+id/item_checkbox_gv_my_magazine"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_five"
+        android:textSize="@dimen/size_ten"
+        android:id="@+id/item_tv_gv_my_magazine"/>
+</LinearLayout>

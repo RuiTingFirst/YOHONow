@@ -5,12 +5,19 @@ package lanou.dllo.yohonow.tools.urltools;
  */
 
 public class URLValues {
+
+    public static final String WELCOME_URL = "http://new.yohoboys.com/yohoboyins/v5/common/getSplashScreen";
+    public static final String WELCOM_VALUE = "{\"platform\":\"4\",\"udid\":\"000000000000000b667280949982902\",\"language\":\"zh-Hans\",\"curVersion\":\"5.0.5\",\"authInfo\":{\"udid\":\"000000000000000b667280949982902\"},\"locale\":\"zh-Hans\"}";
+
     public static final String COLUMN_URL = "http://new.yohoboys.com/yohoboyins/v5/channel/aggregationIndex";
     public static final String COLUMN_VALUE = "%7B%22startTime%22%3A%220%22%2C%22limit%22%3A%2212%22%2C%22platform%22%3A%224%22%2C%22curVersion%22%3A%225.0.5%22%2C%22authInfo%22%3A%7B%22udid%22%3A%220000000000000005158d5733dbef8e1%22%7D%2C%22locale%22%3A%22zh-Hans%22%2C%22lastTime%22%3A%220%22%2C%22udid%22%3A%220000000000000005158d5733dbef8e1%22%2C%22language%22%3A%22zh-Hans%22%7D& ";
     public static final String COLUMN_KEY = "parameters";
+
     public static final String COLUMN_HEAD_URL = "http://new.yohoboys.com/yohoboyins/v5/comment/shoseList";
     public static final String COLUMN_HEAD_KEY = "parameters";
     public static final String COLUMN_HEAD_VALUE = "%7B%22limit%22%3A12%2C%22uid%22%3A%22%22%2C%22platform%22%3A%224%22%2C%22curVersion%22%3A%225.0.5%22%2C%22authInfo%22%3A%7B%22udid%22%3A%220000000000000005158d5733dbef8e1%22%7D%2C%22locale%22%3A%22zh-Hans%22%2C%22lastTime%22%3A%220%22%2C%22udid%22%3A%220000000000000005158d5733dbef8e1%22%2C%22language%22%3A%22zh-Hans%22%7D&";
+
+    public static final String COLUMN_DETAIL_URL = "http://new.yohoboys.com/yohoboyins/v5/channel/lookbook";
 
     public static final String HOME_URL = "http://new.yohoboys.com/yohoboyins/v5/channel/recommendList";
     public static final String HOME_KEY = "parameters";

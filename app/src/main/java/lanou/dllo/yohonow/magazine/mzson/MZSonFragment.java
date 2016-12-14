@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -19,10 +20,13 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
+import lanou.dllo.yohonow.greendao.DBTools;
+import lanou.dllo.yohonow.greendao.Magazine;
 import lanou.dllo.yohonow.tools.urltools.URLValues;
 import lanou.dllo.yohonow.tools.volleytools.NetHelper;
 import lanou.dllo.yohonow.tools.volleytools.NetListener;
@@ -324,7 +328,7 @@ public class MZSonFragment extends BaseFragment implements View.OnClickListener 
     /**
      * POP 布局显示放大图
      */
-    private void initPopWindow(String url, String content) {
+    private void initPopWindow(final String url, final String content) {
         mPopupWindow = new PopupWindow(mContext);
         // 铺满屏幕
         mPopupWindow = new PopupWindow(mView, WindowManager.LayoutParams.MATCH_PARENT,
@@ -334,14 +338,28 @@ public class MZSonFragment extends BaseFragment implements View.OnClickListener 
         mPopupWindow.setAnimationStyle(R.style.AnimationFade);
         mPopupWindow.setFocusable(true);
         ImageView imageView = (ImageView) mView.findViewById(R.id.iv_pop_mzson_fragment);
-
         Picasso.with(mContext).load(url).into(imageView);
         TextView textView = (TextView) mView.findViewById(R.id.tv_yoho_pop_mzson_fragment);
         mRl = (RelativeLayout) mView.findViewById(R.id.rl_pop_mzson_fragment);
         textView.setText(content);
+        TextView tvDownload = (TextView) mView.findViewById(R.id.tv_download_pop_mzson_fragment);
+        // 点击下载就下载并存数据库
+        tvDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Magazine magazine = new Magazine(null, content, url, false);
+                if (!DBTools.getInstance().isHaveTheJournal(content)){
+                    List<Magazine> list = new ArrayList<Magazine>();
+                    list.add(magazine);
+                    DBTools.getInstance().insertList(list);
+                    Log.d("MZSonFragment", "--" + 2333);
+                }
+                mPopupWindow.dismiss();
+            }
+        });
         // 隐藏窗口标题栏
         mRl.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         mPopupWindow.setContentView(mView);
         // 点击pop消失
         mRl.setOnClickListener(new View.OnClickListener() {

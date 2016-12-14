@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_column_detail_aty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lanou.dllo.yohonow.column.columndetail.ColumnDetailAty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:background="@color/colorWhite">
+
+
+
+        <TextView
+            android:id="@+id/tv_title_activity_column_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/size_twenty"/>
+        <ImageView
+            android:id="@+id/iv_activity_column_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_twenty"
+            android:src="@mipmap/menu_back_n"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_activity_column_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="none"/>
+
+</LinearLayout>

@@ -67,7 +67,6 @@ public class GsonRequest<T> extends Request<T> {
             //这是网络请求失败的返回结果
             return Response.error(new ParseError(e));
         }
-
     }
 
     @Override

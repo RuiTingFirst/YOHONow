@@ -84,7 +84,7 @@ public class HomeBean {
             private String updateMd5;
             private int imgNum;
             private int type;
-            private List<TagBean> tag;
+            private Object tag;
             private String journal;
 
             public String getJournal() {
@@ -238,11 +238,11 @@ public class HomeBean {
                 this.type = type;
             }
 
-            public List<TagBean> getTag() {
+            public Object getTag() {
                 return tag;
             }
 
-            public void setTag(List<TagBean> tag) {
+            public void setTag(Object tag) {
                 this.tag = tag;
             }
 

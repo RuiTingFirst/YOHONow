@@ -12,3 +12,4 @@
                    <!--请求焦点-->
                    <requestFocus/>
                </LinearLayout>
+5 栏目 详情的type = 1;

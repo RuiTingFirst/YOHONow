@@ -23,7 +23,7 @@ import lanou.dllo.yohonow.base.BaseActivity;
 public class LogInActivity extends BaseActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private ImageView mIvClose;
-    private ViewPager mVp;
+    public static ViewPager mVp;
     private TextView mTvYoho;
 
     @Override

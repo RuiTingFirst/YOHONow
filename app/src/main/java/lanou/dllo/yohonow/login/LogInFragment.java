@@ -1,7 +1,13 @@
 package lanou.dllo.yohonow.login;
 
+
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -15,11 +21,23 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.wevey.selector.dialog.DialogOnItemClickListener;
+import com.wevey.selector.dialog.MDSelectionDialog;
 import com.wevey.selector.dialog.NormalAlertDialog;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.framework.PlatformDb;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.tencent.qq.QQ;
+import lanou.dllo.yohonow.MainActivity;
 import lanou.dllo.yohonow.R;
 import lanou.dllo.yohonow.base.BaseFragment;
 
@@ -52,6 +70,11 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener,
     private ImageView mIvCloseSmall;
     private ImageView mIvNumCloseSmall;
     private NormalAlertDialog mDialog;
+    private PopupWindow mMPopupWindow;
+    private View mView;
+    private TextView mTvPhone;
+    private TextView mTvMailbox;
+    private TextView mTvCancel;
 
     @Override
     protected int setLayout() {
@@ -152,7 +175,6 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener,
              * 显示密码
              */
             case R.id.iv_login_password_see_icon_log_in_activity:
-                Log.d("LogInActivity", "2" + "---");
                 mIvUnSee.setVisibility(View.VISIBLE);
                 mIvSee.setVisibility(View.GONE);
                 // 隐藏密码
@@ -176,6 +198,13 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener,
              */
             case R.id.btn_denglu_login_activity:
                 Log.d("LogInActivity", "14" + "---");
+                break;
+            /**
+             * 忘记密码
+             */
+            case R.id.tv_forget_password_lon_in_activity:
+                Log.d("LogInFragment", "--" + 1312321);
+                initForgetPasswordPop();
                 break;
             /**
              * 微信
@@ -203,7 +232,30 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener,
              * QQ
              */
             case R.id.iv_qq_login_activity:
-                Log.d("LogInActivity", "20" + "---");
+                Platform qq = ShareSDK.getPlatform(QQ.NAME);
+                qq.authorize();
+                qq.setPlatformActionListener(new PlatformActionListener() {
+                    @Override
+                    public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
+                        PlatformDb platformDb = platform.getDb();
+                        Intent intent = new Intent();
+                        Log.e("tag", "name:" + platformDb.getUserName() + "---" + platformDb.getUserIcon());
+                        intent.putExtra("name", platformDb.getUserName());
+                        intent.putExtra("icon", platformDb.getUserIcon());
+                        getActivity().setResult(0, intent);
+                        getActivity().finish();
+                    }
+
+                    @Override
+                    public void onError(Platform platform, int i, Throwable throwable) {
+
+                    }
+
+                    @Override
+                    public void onCancel(Platform platform, int i) {
+
+                    }
+                });
                 break;
             case R.id.iv_f_login_activity:
                 Log.d("LogInActivity", "1" + "---");
@@ -225,7 +277,10 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener,
              * 注册
              */
             case R.id.tv_register_login_activity:
-                Log.d("LogInActivity", "19" + "---");
+                /**
+                 * 先把vp设置成静态的 然后类调用 setCurrentItem(1)是设置跳到的页 参数是第几页 从0 开始
+                 */
+                LogInActivity.mVp.setCurrentItem(1);
                 break;
             /**
              * 输入密码时显示, 点击时删除所有
@@ -241,10 +296,59 @@ public class LogInFragment extends BaseFragment implements View.OnClickListener,
                 Log.d("LogInFragment", "强强有点二" + "--");
                 mEdtNum.setText("");
                 break;
+            /**
+             * 号码输入
+             */
             case R.id.edt_phone_number_log_in_activity:
 
                 break;
         }
+    }
+
+    private void initForgetPasswordPop() {
+
+        mMPopupWindow = new PopupWindow(mContext);
+        // 铺满屏
+        mView = LayoutInflater.from(mContext).inflate(R.layout.dialog_login_fragment, null);
+        mTvPhone = (TextView) mView.findViewById(R.id.tv_phone_to_retrieve_password_dialog_login_fragment);
+        mTvMailbox = (TextView) mView.findViewById(R.id.tv_mailbox_to_retrieve_password_dialog_login_fragment);
+        mTvCancel = (TextView) mView.findViewById(R.id.tv_cancel_dialog_login_fragment);
+        RelativeLayout rl = (RelativeLayout) mView.findViewById(R.id.rl_dialog_login_fragment);
+        mMPopupWindow = new PopupWindow(mView, WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        // 设置动画效果
+        mMPopupWindow.setAnimationStyle(R.style.AnimationFade);
+        mMPopupWindow.setFocusable(true);
+        mMPopupWindow.setContentView(mView);
+        // 通过手机找回密码
+        mTvPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LogInActivity.mVp.setCurrentItem(1);
+                mMPopupWindow.dismiss();
+            }
+        });
+        // 通过邮箱找回密码
+        mTvMailbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LogInActivity.mVp.setCurrentItem(1);
+                mMPopupWindow.dismiss();
+            }
+        });
+        // 点击pop消失
+        mTvCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mMPopupWindow.dismiss();
+            }
+        });
+        if (!mMPopupWindow.isShowing()) {
+            mMPopupWindow.showAtLocation(mTvForgetPassword, Gravity.BOTTOM, 0, 0);
+        } else {
+            mMPopupWindow.dismiss();
+        }
+
     }
 
     private void initDialog() {

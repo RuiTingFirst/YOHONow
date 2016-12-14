@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recommend_web_view_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="lanou.dllo.yohonow.home.RecommendWebViewDetailActivity">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/magin_forty">
+
+  </RelativeLayout>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_zero"
+        android:layout_weight="1"
+        android:id="@+id/activity_recommend_web_view_detail_webView"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty">
+
+    </RelativeLayout>
+</LinearLayout>

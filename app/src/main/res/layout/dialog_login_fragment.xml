@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:alpha="0.5"
+    android:id="@+id/rl_dialog_login_fragment">
+</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_twenty"
+        android:layout_marginRight="@dimen/magin_twenty"
+        android:background="@drawable/border_pop"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_forty"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:gravity="center_vertical"
+            android:text="@string/password_forget"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_one"
+            android:background="@color/colorDanHui">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_phone_to_retrieve_password_dialog_login_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_forty"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:gravity="center_vertical"
+            android:text="@string/phone_get_password"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_one"
+            android:background="@color/colorDanHui">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mailbox_to_retrieve_password_dialog_login_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_forty"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:gravity="center_vertical"
+            android:text="@string/mailbox_password"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_one"
+            android:background="@color/colorDanHui">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel_dialog_login_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_forty"
+            android:gravity="center"
+            android:text="@string/cancel"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

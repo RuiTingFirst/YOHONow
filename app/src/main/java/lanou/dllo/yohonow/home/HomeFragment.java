@@ -2,6 +2,7 @@ package lanou.dllo.yohonow.home;
 
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
+import com.aspsine.swipetoloadlayout.OnRefreshListener;
+import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.google.gson.Gson;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -35,7 +39,7 @@ import lanou.dllo.yohonow.tools.volleytools.NetListener;
  * Created by dllo on 16/11/23.
  */
 
-public class HomeFragment extends BaseFragment implements View.OnClickListener {
+public class HomeFragment extends BaseFragment implements View.OnClickListener, OnRefreshListener, OnLoadMoreListener {
     private ListView mListView;
     private HomeAdapter mHomeAdapter;
     private ArrayList<String> mImage;
@@ -43,7 +47,15 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     private DrawerLayout mDrawerLayout;
     private ImageView mIvMine;
     private ImageView mIvSearch;
+    private SwipeToLoadLayout mSwipeToLoadLayout;
 
+    private int num = 0;
+
+    //解析post接口用到的
+    private HashMap<String, String> mapHome;
+    private HashMap<String, String> map;
+    private String value;
+    private Gson gson;
     /**
      * 绑定布局
      *
@@ -60,7 +72,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     @Override
     protected void initView() {
 
-        mListView = bindView(R.id.lv_home_fragment);
+        /**
+         * 下拉刷新, 上拉加载
+         */
+        mSwipeToLoadLayout = bindView(R.id.swipe_toload_layout_home_fragment);
+        mSwipeToLoadLayout.setOnRefreshListener(this);
+        mSwipeToLoadLayout.setOnLoadMoreListener(this);
+        mListView = bindView(R.id.swipe_target);
+
         mIvMine = bindView(R.id.iv_toolbar_mine_main);
         mIvSearch = bindView(R.id.iv_toolbar_search_main);
         /**
@@ -92,6 +111,36 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
          * post请求, 解析 轮播图数据
          */
         initTrunUrlData();
+
+        homeMap();
+
+    }
+    /**
+     * map
+     */
+    private void homeMap() {
+        map = new HashMap<>();
+        map.put("newsEndtime", "0");
+        map.put("otherEndTime", "0");
+        map.put("magazineType", "3");
+        map.put("WallpaperType", "3");
+        map.put("scale", "2");
+        map.put("num", String.valueOf(num));
+        map.put("platform", "4");
+        map.put("locale", "zh-Hans");
+        map.put("language", "zh-Hans");
+        map.put("udid", "00000000000000063aa461b71c4cfcf");
+        map.put("curVersion", "5.0.4");
+
+        HashMap<String, String> mm = new HashMap<>();
+        mm.put("udid", "00000000000000063aa461b71c4cfcf");
+        String a = new Gson().toJson(mm).toString();
+        map.put("authInfo", a);
+        gson = new Gson();
+        // key value 反转化
+        value = gson.toJson(map).toString();
+        mapHome = new HashMap<>();
+        mapHome.put(URLValues.HOME_KEY, value);
 
     }
 
@@ -175,5 +224,77 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
         }
+    }
+
+    /**
+     * 下拉刷新
+     */
+    @Override
+    public void onRefresh() {
+        /**
+         * 刷新时间
+         */
+        mSwipeToLoadLayout.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // true 是一直刷新 false 不让一直刷新
+                mSwipeToLoadLayout.setRefreshing(false);
+                getRefreshData();
+            }
+        }, 2000);
+    }
+
+    /**
+     * 获取刷新数据
+     */
+    private void getRefreshData() {
+        NetHelper.MyRequest(URLValues.HOME_URL, HomeBean.class, new NetListener<HomeBean>() {
+            @Override
+            public void successListener(HomeBean response) {
+                mHomeAdapter.setHomeBean(response);
+            }
+
+            @Override
+            public void errorListener(VolleyError error) {
+
+            }
+        }, mapHome);
+
+    }
+
+    /**
+     * 上拉加载
+     */
+    @Override
+    public void onLoadMore() {
+        mSwipeToLoadLayout.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // true 是自动加载更多 false 是手动加载
+                mSwipeToLoadLayout.setLoadingMore(false);
+                getLoadData();
+            }
+        }, 1000);
+    }
+
+    /**
+     * 获取加载数据
+     */
+    private void getLoadData() {
+        NetHelper.MyRequest(URLValues.HOME_URL, HomeBean.class, new NetListener<HomeBean>() {
+            @Override
+            public void successListener(HomeBean response) {
+                mHomeAdapter.addMore(response);
+                map.put("num", String.valueOf(num));
+                num += 16;
+                value = gson.toJson(map).toString();
+                mapHome.put(URLValues.HOME_KEY, value);
+            }
+
+            @Override
+            public void errorListener(VolleyError error) {
+
+            }
+        }, mapHome);
     }
 }

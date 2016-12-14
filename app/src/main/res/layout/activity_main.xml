@@ -73,10 +73,11 @@
 
             <ImageView
                 android:id="@+id/iv_draw_layout_default_head"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/magin_eighty"
+                android:layout_height="@dimen/magin_eighty"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/magin_one_hundred"
+                android:scaleType="fitXY"
                 android:src="@mipmap/default_head"/>
 
             <TextView

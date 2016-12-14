@@ -9,6 +9,8 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 
+import lanou.dllo.yohonow.greendao.MyApp;
+
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**

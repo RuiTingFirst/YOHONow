@@ -25,6 +25,12 @@ public class ColumnAdapter extends BaseAdapter {
     private ColumnBean mColumnBeen;
     private Context mContext;
 
+    // 把加载的数据刷新
+    public void addMore(ColumnBean dataMine){
+        mColumnBeen.getData().addAll(dataMine.getData());
+        notifyDataSetChanged();
+    }
+
     public ColumnAdapter(Context context) {
         mContext = context;
     }

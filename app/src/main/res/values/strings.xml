@@ -45,5 +45,17 @@
     <string name="phone">手机号</string>
     <string name="next">下一步</string>
     <string name="download">立即下载</string>
+    <string name="cancel">取消</string>
+    <string name="phone_get_password">通过手机找回密码</string>
+    <string name="mailbox_password">通过邮箱找回密码</string>
+    <string name="chose">选择</string>
+    <string name="write_a_comment">写评论...</string>
+    <string name="edit">编辑</string>
+    <string name="eight">8</string>
+    <string name="add">+</string>
+    <string name="ninety_nine">99</string>
+    <string name="fiften">15</string>
+    <string name="fifteen">15</string>
+    <string name="zero">(0)</string>
 
 </resources>

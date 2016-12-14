@@ -40,6 +40,10 @@ public class HomeAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public void addMore(HomeBean homeBean){
+        mHomeBean.getData().addAll(homeBean.getData());
+        notifyDataSetChanged();
+    }
     public HomeAdapter(Context context) {
         mContext = context;
     }
@@ -62,7 +66,6 @@ public class HomeAdapter extends BaseAdapter {
     @Override
     public int getItemViewType(int position) {
         if (mHomeBean.getData().get(position).getType() == 0) {
-            Log.d("类型", "mHomeBean.getData().get(position).getType():" + mHomeBean.getData().get(position).getType());
             return TYPE_ZERO;
         } else if (mHomeBean.getData().get(position).getType() == 2) {
             return TYPE_TWO;
@@ -99,15 +102,12 @@ public class HomeAdapter extends BaseAdapter {
                 /**
                  * type == 0, 布局1 标题
                  */
-                viewHolderOne.mTvTitleZero.setText(mBean.get(0).getTitle());
+                viewHolderOne.mTvTitleZero.setText(mBean.get(0).getTitle() + mBean.get(0).getSubtitle());
                 /**
                  * type == 0, 布局1 时间
                  */
                 viewHolderOne.mTvCreateTimeZero.setText(StringTime.IntoTime(mBean.get(0).getCreate_time()));
-                /**
-                 * type == 0, 布局1 tag_name
-                 */
-                viewHolderOne.mTvTagNameZero.setText(mBean.get(0).getTag().get(0).getTag_name());
+
                 /**
                  * type == 0, 布局1 图片个数
                  * listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
@@ -129,16 +129,12 @@ public class HomeAdapter extends BaseAdapter {
                 /**
                  * type == 0, 布局2 标题
                  */
-                viewHolderOne.mTvTitleZeroTwo.setText(mBean.get(1).getTitle());
+                viewHolderOne.mTvTitleZeroTwo.setText(mBean.get(1).getTitle() + mBean.get(1).getSubtitle());
                 /**
                  * type == 0, 布局2 时间
                  */
                 viewHolderOne.mTvCreateTimeZeroTwo.setText(StringTime.IntoTime(mBean.get(1).getCreate_time()));
 
-                /**
-                 * type == 0, 布局2 tag_name
-                 */
-                viewHolderOne.mTvTagNameZeroTwo.setText(mBean.get(1).getTag().get(0).getTag_name());
                 /**
                  * type == 0, 布局2 图片个数
                  * listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
@@ -160,17 +156,12 @@ public class HomeAdapter extends BaseAdapter {
                 /**
                  * type == 0, 布局3 标题
                  */
-                viewHolderOne.mTvTitleZeroThree.setText(mBean.get(2).getTitle());
+                viewHolderOne.mTvTitleZeroThree.setText(mBean.get(2).getTitle() + mBean.get(2).getSubtitle());
 
                 /**
                  * type == 0, 布局3 时间
                  */
                 viewHolderOne.mTvCreateTimeZeroThree.setText(StringTime.IntoTime(mBean.get(2).getCreate_time()));
-                /**
-                 * type == 0, 布局3 tag_name
-                 */
-                viewHolderOne.mTvTagNameZeroThree.setText(mBean.get(2).getTag().get(0).getTag_name());
-
                 /**
                  * type == 0, 布局3 图片个数
                  * listView 复用, 每当设置GONE的时候, 下回用就是GONE, 所以每次用的时候必须让它显示(VISIBLE)
@@ -203,17 +194,13 @@ public class HomeAdapter extends BaseAdapter {
                     viewHolderTwo = (ViewHolderTwo) view.getTag();
                 }
                 /**
-                 * type == 2, tag_name
-                 */
-                viewHolderTwo.mTvTagNameTwo.setText(mBean.get(0).getTag().get(0).getTag_name());
-                /**
                  * type == 2, 时间
                  */
                 viewHolderTwo.mTvCreateTimeTwo.setText(StringTime.IntoTime(mBean.get(0).getCreate_time()));
                 /**
                  * type == 2, 标题
                  */
-                viewHolderTwo.mTvTitleTwo.setText(mBean.get(0).getTitle());
+                viewHolderTwo.mTvTitleTwo.setText(mBean.get(0).getTitle() + mBean.get(0).getSubtitle());
 
                 /**
                  * type == 2, 图片

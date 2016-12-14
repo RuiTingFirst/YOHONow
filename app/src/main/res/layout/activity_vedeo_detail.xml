@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_vedeo_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="lanou.dllo.yohonow.video.videoson.videodetail.VideoDetailActivity">
+
+    <!--视频-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_two_hundred">
+
+        <VideoView
+            android:id="@+id/video_view_activity_video_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_forty">
+            <!--返回-->
+            <ImageView
+                android:id="@+id/iv_back_w_activity_video_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_ten"
+                android:src="@mipmap/menu_back_w"/>
+            <!--分享-->
+            <ImageView
+                android:id="@+id/iv_share_activity_video_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_ten"
+                android:src="@mipmap/fenxiang_white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview_activity_video_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_zero"
+        android:layout_weight="1"/>
+    <!--写评论, 收藏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:layout_marginLeft="@dimen/padding_ten"
+        android:layout_marginRight="@dimen/padding_five"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+        <!--写评论-->
+        <EditText
+            android:id="@+id/edt_write_comment_activity_video_detail"
+            android:layout_width="@dimen/activity_zero"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/padding_five"
+            android:layout_weight="5"
+            android:background="@drawable/border"
+            android:hint="@string/write_a_comment"/>
+        <!--评论-->
+        <LinearLayout
+            android:layout_width="@dimen/activity_zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_comment_b_activity_video_webview_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_ten"
+                android:src="@mipmap/comment_b"/>
+            <!--数量-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/activity_zero"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/activity_zero"
+                    android:layout_weight="1"
+                    android:text="@string/eight"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--收藏-->
+        <LinearLayout
+            android:layout_width="@dimen/activity_zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_love_b_activity_video_webview_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_five"
+                android:src="@mipmap/love_b"/>
+
+            <!--收藏数量-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/activity_zero"
+                    android:layout_weight="1"
+                    android:text="@string/ninety_nine"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/activity_zero"
+                    android:layout_weight="1"
+                    android:text="@string/add"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

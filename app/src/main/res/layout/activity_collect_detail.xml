@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/magin_forty"
+    android:background="@color/colorWhite">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/magin_twenty"
+        android:src="@mipmap/menu_back_n"
+        android:id="@+id/iv_menu_back_activity_collect_detail"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_twenty"
+        android:layout_centerInParent="true"
+        android:text="@string/draw_layout_my_shou_cang"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/padding_ten"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_cancel_activity_collect_detail"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/padding_ten"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_edit_activity_collect_detail"
+        android:visibility="visible"/>
+</RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:id="@+id/lv_activity_collect_detail"/>
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:background="@color/colorWhite">
+
+        <!--返回-->
+        <ImageView
+            android:id="@+id/iv_back_my_magazine_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/magin_thirty"
+            android:src="@mipmap/menu_back_n"
+            android:visibility="visible"/>
+        <!--我的杂志-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/draw_layout_my_magazine"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_twenty"/>
+        <!--选择-->
+        <TextView
+            android:id="@+id/tv_chose_my_magazine_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_twenty"
+            android:text="@string/chose"
+            android:textColor="@color/black"
+            android:visibility="visible"/>
+        <!--取消-->
+        <TextView
+            android:id="@+id/tv_cancel_my_magazine_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_twenty"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/grid_view_my_magazine_actyvity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_zero"
+        android:layout_weight="1"
+        android:numColumns="4">
+
+    </GridView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_forty"
+        android:background="@color/colorDanHui"
+        android:id="@+id/rl_rubbish_my_magazine_activity"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/rubbish_magazine"
+            android:layout_centerInParent="true"
+            android:id="@+id/iv_rubbish_my_magazine_activity"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_rubbish_my_magazine_activity"
+            android:layout_marginLeft="@dimen/padding_five"
+            android:text="@string/zero"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_zero_my_magazine_activity"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
